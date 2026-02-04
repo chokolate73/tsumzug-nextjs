@@ -1,6 +1,8 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import serviceTransport from '@/assets/service-transport.jpg';
 import { Home, Trash2, Truck, Building2, Wrench, PaintBucket, Piano, Package, Warehouse, Sparkles, Plug, Hammer, LucideIcon, ArrowRight } from 'lucide-react';
 interface Service {

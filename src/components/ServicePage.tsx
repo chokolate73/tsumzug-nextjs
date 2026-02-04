@@ -1,6 +1,9 @@
+'use client';
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Link, useNavigate } from 'react-router-dom';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -145,7 +148,7 @@ const languages = [
 ];
 
 export default function ServicePage({ service, lang }: ServicePageProps) {
-  const navigate = useNavigate();
+  const router = useRouter();
   const t = translations[lang];
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [formData, setFormData] = useState({
@@ -174,7 +177,7 @@ export default function ServicePage({ service, lang }: ServicePageProps) {
       targetLang === 'de'
         ? `/services/${service.slug.de}`
         : `/${targetLang}/services/${service.slug[targetLang]}`;
-    navigate(targetPath);
+    router.push(targetPath);
   };
 
   const whatsappMessages = {
@@ -272,32 +275,32 @@ export default function ServicePage({ service, lang }: ServicePageProps) {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
         <div className="container mx-auto px-6 md:px-12">
           <div className="flex items-center justify-between h-20">
-            <Link to={getHomePath()} className="text-xl font-bold">
+            <Link href={getHomePath()} className="text-xl font-bold">
               <span className="text-slate-900">TopSicher</span>
               <span className="text-orange-500"> Umzüge</span>
             </Link>
 
             <div className="hidden md:flex items-center gap-6">
               <Link
-                to={getHomePath()}
+                href={getHomePath()}
                 className="font-medium text-slate-600 hover:text-slate-900 transition-colors"
               >
                 {t.navHome}
               </Link>
               <Link
-                to={`${getHomePath()}#services`}
+                href={`${getHomePath()}#services`}
                 className="font-medium text-slate-600 hover:text-slate-900 transition-colors"
               >
                 {t.navServices}
               </Link>
               <Link
-                to={`${getHomePath()}#about`}
+                href={`${getHomePath()}#about`}
                 className="font-medium text-slate-600 hover:text-slate-900 transition-colors"
               >
                 {t.navAbout}
               </Link>
               <Link
-                to={`${getHomePath()}#contact`}
+                href={`${getHomePath()}#contact`}
                 className="font-medium text-slate-600 hover:text-slate-900 transition-colors"
               >
                 {t.navContact}
@@ -348,21 +351,21 @@ export default function ServicePage({ service, lang }: ServicePageProps) {
             <div className="container mx-auto px-6 py-6">
               <div className="flex flex-col gap-4">
                 <Link
-                  to={getHomePath()}
+                  href={getHomePath()}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="text-lg font-medium text-slate-700 hover:text-orange-500 py-2 transition-colors"
                 >
                   {t.navHome}
                 </Link>
                 <Link
-                  to={`${getHomePath()}#services`}
+                  href={`${getHomePath()}#services`}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="text-lg font-medium text-slate-700 hover:text-orange-500 py-2 transition-colors"
                 >
                   {t.navServices}
                 </Link>
                 <Link
-                  to={`${getHomePath()}#contact`}
+                  href={`${getHomePath()}#contact`}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="text-lg font-medium text-slate-700 hover:text-orange-500 py-2 transition-colors"
                 >
@@ -418,7 +421,7 @@ export default function ServicePage({ service, lang }: ServicePageProps) {
             transition={{ duration: 0.6 }}
           >
             <Link
-              to={getHomePath()}
+              href={getHomePath()}
               className="inline-flex items-center gap-2 text-orange-400 hover:text-orange-300 transition-colors mb-6"
             >
               <ArrowLeft className="w-4 h-4" />
@@ -757,7 +760,7 @@ export default function ServicePage({ service, lang }: ServicePageProps) {
                 transition={{ delay: index * 0.1 }}
               >
                 <Link
-                  to={getServicePath(s)}
+                  href={getServicePath(s)}
                   className="flex items-center gap-4 p-5 bg-slate-50 rounded-2xl hover:bg-slate-100 hover:shadow-md transition-all group"
                 >
                   <div className="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center group-hover:bg-orange-500 transition-colors flex-shrink-0">
@@ -781,7 +784,7 @@ export default function ServicePage({ service, lang }: ServicePageProps) {
       <footer className="bg-slate-900 py-8">
         <div className="container mx-auto px-6 md:px-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <Link to={getHomePath()} className="text-xl font-bold">
+            <Link href={getHomePath()} className="text-xl font-bold">
               <span className="text-white">TopSicher</span>
               <span className="text-orange-500"> Umzüge</span>
             </Link>

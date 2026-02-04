@@ -1,8 +1,11 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Globe, ChevronDown } from 'lucide-react';
-import { useNavigate, Link } from 'react-router-dom';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -39,11 +42,11 @@ const languages = [
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const navigate = useNavigate();
+  const router = useRouter();
   const currentLang = languages.find(l => l.path === '/') || languages[0];
 
   const handleLanguageChange = (path: string) => {
-    navigate(path);
+    router.push(path);
   };
 
   useEffect(() => {
@@ -114,7 +117,7 @@ export default function Navbar() {
                   {services.map((service) => (
                     <DropdownMenuItem key={service.id} asChild>
                       <Link
-                        to={duisburgServiceUrls[service.id] || `/services/${service.slug.de}`}
+                        href={duisburgServiceUrls[service.id] || `/services/${service.slug.de}`}
                         className="cursor-pointer flex items-center gap-2"
                       >
                         <service.icon className="w-4 h-4 text-orange-500" />
@@ -212,7 +215,7 @@ export default function Navbar() {
                     {services.map((service) => (
                       <Link
                         key={service.id}
-                        to={duisburgServiceUrls[service.id] || `/services/${service.slug.de}`}
+                        href={duisburgServiceUrls[service.id] || `/services/${service.slug.de}`}
                         onClick={() => setIsMobileMenuOpen(false)}
                         className="text-base font-medium text-slate-700 hover:text-orange-500 py-1 transition-colors flex items-center gap-2"
                       >

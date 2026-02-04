@@ -1,5 +1,7 @@
+'use client';
+
 import { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 
 interface RedirectProps {
   to: string;
@@ -11,12 +13,12 @@ interface RedirectProps {
  * This provides a fallback for SPA routing.
  */
 export default function Redirect({ to }: RedirectProps) {
-  const navigate = useNavigate();
+  const router = useRouter();
 
   useEffect(() => {
     // Replace current history entry (simulates redirect behavior)
-    navigate(to, { replace: true });
-  }, [navigate, to]);
+    router.replace(to);
+  }, [router, to]);
 
   return null;
 }

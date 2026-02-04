@@ -1,8 +1,11 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Globe, ChevronDown } from 'lucide-react';
-import { useNavigate, Link } from 'react-router-dom';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -29,11 +32,11 @@ const languages = [
 export default function NavbarRu() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const navigate = useNavigate();
+  const router = useRouter();
   const currentLang = languages.find(l => l.path === '/ru') || languages[2];
 
   const handleLanguageChange = (path: string) => {
-    navigate(path);
+    router.push(path);
   };
 
   useEffect(() => {
@@ -104,7 +107,7 @@ export default function NavbarRu() {
                   {services.map((service) => (
                     <DropdownMenuItem key={service.id} asChild>
                       <Link 
-                        to={`/ru/services/${service.slug.ru}`}
+                        href={`/ru/services/${service.slug.ru}`}
                         className="cursor-pointer flex items-center gap-2"
                       >
                         <service.icon className="w-4 h-4 text-orange-500" />
@@ -202,7 +205,7 @@ export default function NavbarRu() {
                     {services.map((service) => (
                       <Link
                         key={service.id}
-                        to={`/ru/services/${service.slug.ru}`}
+                        href={`/ru/services/${service.slug.ru}`}
                         onClick={() => setIsMobileMenuOpen(false)}
                         className="text-base font-medium text-slate-700 hover:text-orange-500 py-1 transition-colors flex items-center gap-2"
                       >
