@@ -227,7 +227,7 @@ export function buildLandingPageSchemas(config: {
   breadcrumbs: BreadcrumbItem[];
   faqs?: FAQItem[];
 }) {
-  const schemas = [
+  const schemas: Record<string, any>[] = [
     buildMovingCompanySchema({ url: config.pageUrl }),
     buildBreadcrumbSchema(config.breadcrumbs),
     buildWebPageSchema({

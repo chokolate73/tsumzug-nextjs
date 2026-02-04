@@ -1,6 +1,8 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import serviceTransport from '@/assets/service-transport.jpg';
 import {
   Home,
@@ -176,7 +178,7 @@ const ServiceCard = ({ service, index }: { service: Service; index: number }) =>
 
         {/* Learn More Link */}
         <Link
-          to={`/en/services/${service.slug}`}
+          href={`/en/services/${service.slug}`}
           className="inline-flex items-center gap-2 text-orange-500 font-semibold text-sm hover:text-orange-600 transition-colors group/link"
         >
           Learn more

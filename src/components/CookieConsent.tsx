@@ -1,6 +1,8 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Cookie, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -49,14 +51,14 @@ export default function CookieConsent() {
                       Diese Website verwendet nur essenzielle Cookies, um ihr ordnungsgemäßes Funktionieren 
                       sicherzustellen. Weitere Informationen finden Sie in unserer{' '}
                       <Link 
-                        to="/datenschutz" 
+                        href="/datenschutz" 
                         className="text-orange-400 hover:text-orange-300 underline underline-offset-2 transition-colors"
                       >
                         Datenschutzerklärung
                       </Link>{' '}
                       und unserem{' '}
                       <Link 
-                        to="/impressum" 
+                        href="/impressum" 
                         className="text-orange-400 hover:text-orange-300 underline underline-offset-2 transition-colors"
                       >
                         Impressum

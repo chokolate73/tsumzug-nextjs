@@ -1,7 +1,9 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Facebook, ArrowUp } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export default function FooterEn() {
   const scrollToTop = () => {
@@ -152,13 +154,13 @@ export default function FooterEn() {
               </p>
               <span className="text-slate-700 hidden sm:inline">|</span>
               <Link 
-                to="/impressum" 
+                href="/impressum" 
                 className="text-slate-500 hover:text-orange-400 transition-colors text-xs sm:text-sm"
               >
                 Impressum
               </Link>
               <Link
-                to="/datenschutz"
+                href="/datenschutz"
                 className="text-slate-500 hover:text-orange-400 transition-colors text-xs sm:text-sm"
               >
                 Privacy Policy

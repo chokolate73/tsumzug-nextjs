@@ -1,6 +1,9 @@
+'use client';
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Link, useNavigate } from 'react-router-dom';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -457,7 +460,7 @@ export default function LocalSEOPage({
   relatedServices,
   heroImage,
 }: LocalSEOPageProps) {
-  const navigate = useNavigate();
+  const router = useRouter();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -539,13 +542,13 @@ export default function LocalSEOPage({
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
         <div className="container mx-auto px-6 md:px-12">
           <div className="flex items-center justify-between h-20">
-            <Link to={homePath} className="text-xl font-bold">
+            <Link href={homePath} className="text-xl font-bold">
               <span className="text-slate-900">TopSicher</span>
               <span className="text-orange-500"> Umzüge</span>
             </Link>
 
             <div className="hidden md:flex items-center gap-6">
-              <Link to={homePath} className="font-medium text-slate-600 hover:text-slate-900 transition-colors">
+              <Link href={homePath} className="font-medium text-slate-600 hover:text-slate-900 transition-colors">
                 {t.nav.home}
               </Link>
               <a href="#leistungen" className="font-medium text-slate-600 hover:text-slate-900 transition-colors">
@@ -577,7 +580,7 @@ export default function LocalSEOPage({
         {isMobileMenuOpen && (
           <div className="md:hidden bg-white shadow-2xl rounded-b-3xl">
             <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
-              <Link to={homePath} className="text-lg font-medium text-slate-700 py-2">{t.nav.home}</Link>
+              <Link href={homePath} className="text-lg font-medium text-slate-700 py-2">{t.nav.home}</Link>
               <a href="#leistungen" className="text-lg font-medium text-slate-700 py-2" onClick={() => setIsMobileMenuOpen(false)}>{t.nav.services}</a>
               <a href="#preise" className="text-lg font-medium text-slate-700 py-2" onClick={() => setIsMobileMenuOpen(false)}>{t.nav.prices}</a>
               <a href="#faq" className="text-lg font-medium text-slate-700 py-2" onClick={() => setIsMobileMenuOpen(false)}>{t.nav.faq}</a>
@@ -594,7 +597,7 @@ export default function LocalSEOPage({
       <div className="pt-24 bg-slate-100">
         <div className="container mx-auto px-6 md:px-12 py-3">
           <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-slate-600">
-            <Link to={homePath} className="flex items-center gap-1 hover:text-orange-500 transition-colors">
+            <Link href={homePath} className="flex items-center gap-1 hover:text-orange-500 transition-colors">
               <Home className="w-4 h-4" />
               <span>{t.nav.home}</span>
             </Link>
@@ -612,7 +615,7 @@ export default function LocalSEOPage({
 
         <div className="container mx-auto px-6 md:px-12 relative z-10">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <Link to={homePath} className="inline-flex items-center gap-2 text-orange-400 hover:text-orange-300 transition-colors mb-6">
+            <Link href={homePath} className="inline-flex items-center gap-2 text-orange-400 hover:text-orange-300 transition-colors mb-6">
               <ArrowLeft className="w-4 h-4" />
               {t.hero.backToHome}
             </Link>
@@ -631,7 +634,7 @@ export default function LocalSEOPage({
 
             <div className="flex flex-wrap gap-4 mt-8">
               <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-6 text-lg rounded-xl" asChild>
-                <Link to={`/angebot${ANGEBOT_UTM}`} onClick={() => trackAngebotClick('hero_cta')}><Calculator className="mr-2 w-5 h-5" />{t.hero.freeQuote}</Link>
+                <Link href={`/angebot${ANGEBOT_UTM}`} onClick={() => trackAngebotClick('hero_cta')}><Calculator className="mr-2 w-5 h-5" />{t.hero.freeQuote}</Link>
               </Button>
               <Button size="lg" variant="outline" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-6 text-lg rounded-xl" asChild>
                 <a href={COMPANY.phoneLink} onClick={() => trackCallClick(COMPANY.phone, 'hero_cta')}><Phone className="mr-2 w-5 h-5" />{t.nav.callNow}</a>
@@ -898,7 +901,7 @@ export default function LocalSEOPage({
             {relatedServices.map((service, index) => (
               <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}>
                 <Link
-                  to={service.href}
+                  href={service.href}
                   className="flex items-center justify-between p-5 bg-slate-50 rounded-2xl hover:bg-slate-100 hover:shadow-md transition-all group"
                 >
                   <span className="font-medium text-slate-900 group-hover:text-orange-500 transition-colors">{service.text}</span>
@@ -997,7 +1000,7 @@ export default function LocalSEOPage({
         <div className="container mx-auto px-6 md:px-12">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <Link to={homePath} className="text-xl font-bold">
+              <Link href={homePath} className="text-xl font-bold">
                 <span className="text-white">TopSicher</span>
                 <span className="text-orange-500"> Umzüge</span>
               </Link>
@@ -1008,7 +1011,7 @@ export default function LocalSEOPage({
               <ul className="space-y-2 text-sm">
                 {footerServiceLinks[lang].map((link, index) => (
                   <li key={index}>
-                    <Link to={link.href} className="text-slate-400 hover:text-orange-400 transition-colors">{link.text}</Link>
+                    <Link href={link.href} className="text-slate-400 hover:text-orange-400 transition-colors">{link.text}</Link>
                   </li>
                 ))}
               </ul>
@@ -1025,8 +1028,8 @@ export default function LocalSEOPage({
             <div>
               <h4 className="font-semibold text-white mb-4">{t.footer.legal}</h4>
               <ul className="space-y-2 text-sm">
-                <li><Link to="/impressum" className="text-slate-400 hover:text-orange-400 transition-colors">{t.footer.imprint}</Link></li>
-                <li><Link to="/datenschutz" className="text-slate-400 hover:text-orange-400 transition-colors">{t.footer.privacy}</Link></li>
+                <li><Link href="/impressum" className="text-slate-400 hover:text-orange-400 transition-colors">{t.footer.imprint}</Link></li>
+                <li><Link href="/datenschutz" className="text-slate-400 hover:text-orange-400 transition-colors">{t.footer.privacy}</Link></li>
               </ul>
             </div>
           </div>
