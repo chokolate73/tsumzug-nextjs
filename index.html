@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Google Analytics 4 -->
+    <!-- TODO: Replace GA_MEASUREMENT_ID with your actual GA4 ID (format: G-XXXXXXXXXX) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TopSicher Umzüge - Professionelle Umzüge in NRW</title>
+    <meta name="description" content="Professionelle Umzugs- und Transportdienstleistungen in Duisburg und ganz Nordrhein-Westfalen." />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <meta name="author" content="TopSicher Umzüge" />
+
+    <meta property="og:title" content="TopSicher Umzüge - Professionelle Umzüge in NRW" />
+    <meta property="og:description" content="Professionelle Umzugs- und Transportdienstleistungen in Duisburg und ganz Nordrhein-Westfalen." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/og-image.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="/og-image.png" />
+
+    <!-- DNS Prefetch for external resources -->
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+
+    <!-- Preload LCP hero images -->
+    <link rel="preload" as="image" href="/src/assets/hero-background-mobile.png" media="(max-width: 767px)" fetchpriority="high">
+    <link rel="preload" as="image" href="/src/assets/hero-background.jpg" media="(min-width: 768px)" fetchpriority="high">
+
+    <!-- Critical CSS for above-the-fold content -->
+    <style>
+      /* Critical CSS - prevent layout shift */
+      *, *::before, *::after { box-sizing: border-box; }
+      body { margin: 0; font-family: system-ui, -apple-system, sans-serif; }
+      #root { min-height: 100vh; }
+      /* Hero section skeleton */
+      .hero-skeleton { min-height: 90vh; background: #f8fafc; }
+    </style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
