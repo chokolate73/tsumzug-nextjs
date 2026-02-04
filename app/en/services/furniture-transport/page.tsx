@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import FurnitureTransport from '@/views/en/services/FurnitureTransport';
+import { getBaseUrl } from '@/lib/seo/helpers';
 
-const BASE_URL = 'https://tsumzug.de';
+const BASE_URL = getBaseUrl();
 
 export const metadata: Metadata = {
   title: 'Furniture Transport Duisburg | Flexible & Insured from €119',

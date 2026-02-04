@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import RenovierungDuisburg from '@/views/duisburg/RenovierungDuisburg';
+import { getBaseUrl } from '@/lib/seo/helpers';
 
-const BASE_URL = 'https://tsumzug.de';
+const BASE_URL = getBaseUrl();
 
 export const metadata: Metadata = {
   title: 'Renovierung Duisburg | Malerarbeiten ab 12€/m²',

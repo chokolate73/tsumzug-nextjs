@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import PreiseDuisburg from '@/views/duisburg/PreiseDuisburg';
+import { getBaseUrl } from '@/lib/seo/helpers';
 
-const BASE_URL = 'https://tsumzug.de';
+const BASE_URL = getBaseUrl();
 
 export const metadata: Metadata = {
   title: 'Preise Duisburg | Alle Umzugs- und Servicepreise auf einen Blick',

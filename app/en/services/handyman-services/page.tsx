@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import HandymanServices from '@/views/en/services/HandymanServices';
+import { getBaseUrl } from '@/lib/seo/helpers';
 
-const BASE_URL = 'https://tsumzug.de';
+const BASE_URL = getBaseUrl();
 
 export const metadata: Metadata = {
   title: 'Handyman Services Duisburg | Professional from €35/hour',

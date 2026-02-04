@@ -29,7 +29,7 @@ const testimonials: Testimonial[] = [{
   name: "Thomas H.",
   location: "Köln",
   rating: 5,
-  text: "Habe schon mehrere Umzugsfirmen genutzt, aber Tsapenko Transporte war mit Abstand die beste. Professionelle Verpackung, keine Schäden, faire Preise. Beim nächsten Umzug wieder!",
+  text: "Habe schon mehrere Umzugsfirmen genutzt, aber TopSicher Umzüge war mit Abstand die beste. Professionelle Verpackung, keine Schäden, faire Preise. Beim nächsten Umzug wieder!",
   service: "Wohnungsumzug",
   date: "September 2024"
 }, {

@@ -2,9 +2,10 @@ import type { Metadata } from 'next';
 import Providers from '@/components/Providers';
 import './globals.css';
 import Script from 'next/script';
+import { getBaseUrl } from '@/lib/seo/helpers';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://tsumzug.de'),
+  metadataBase: new URL(getBaseUrl()),
   title: {
     default: 'TopSicher Umzüge - Professionelle Umzüge in NRW',
     template: '%s | TopSicher Umzüge',

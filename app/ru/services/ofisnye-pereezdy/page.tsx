@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import OfisnyePereezdy from '@/views/ru/services/OfisnyePereezdy';
+import { getBaseUrl } from '@/lib/seo/helpers';
 
-const BASE_URL = 'https://tsumzug.de';
+const BASE_URL = getBaseUrl();
 
 export const metadata: Metadata = {
   title: 'Офисный переезд Дуйсбург | Минимальный простой',

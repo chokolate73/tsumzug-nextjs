@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import ClearanceDisposal from '@/views/en/services/ClearanceDisposal';
+import { getBaseUrl } from '@/lib/seo/helpers';
 
-const BASE_URL = 'https://tsumzug.de';
+const BASE_URL = getBaseUrl();
 
 export const metadata: Metadata = {
   title: 'Clearance & Disposal Duisburg | Fast & Fair from €199',

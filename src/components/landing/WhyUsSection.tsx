@@ -6,10 +6,10 @@ import moversTeam from '@/assets/movers-team.jpeg';
 import { Shield, Clock, MapPin, Heart, LucideIcon } from 'lucide-react';
 
 const stats = [
-  { value: "500+", label: "Moves Completed" },
-  { value: "98%", label: "Customer Satisfaction" },
-  { value: "24h", label: "Response Time" },
-  { value: "NRW", label: "Full Coverage" }
+  { value: "500+", label: "Umzüge abgeschlossen" },
+  { value: "98%", label: "Kundenzufriedenheit" },
+  { value: "24h", label: "Reaktionszeit" },
+  { value: "NRW", label: "NRW-weit" }
 ];
 
 interface Benefit {
@@ -21,23 +21,23 @@ interface Benefit {
 const benefits: Benefit[] = [
   {
     icon: Shield,
-    title: "Fully Insured",
-    description: "Your belongings are protected throughout the entire moving process."
+    title: "Vollversichert",
+    description: "Alle Gegenstände sind während des gesamten Umzugs versichert."
   },
   {
     icon: Clock,
-    title: "Punctual Service",
-    description: "We respect your time and always arrive when promised."
+    title: "Pünktlicher Service",
+    description: "Wir respektieren Ihre Zeit und sind immer zum vereinbarten Termin da."
   },
   {
     icon: MapPin,
-    title: "Local Expertise",
-    description: "Based in Duisburg with deep knowledge of the entire NRW region."
+    title: "Lokale Erfahrung",
+    description: "Mit Sitz in Duisburg und bester Kenntnis der gesamten NRW-Region."
   },
   {
     icon: Heart,
-    title: "Personal Care",
-    description: "We treat every item as if it were our own, with utmost care."
+    title: "Persönliche Betreuung",
+    description: "Wir behandeln jeden Gegenstand so sorgfältig, als wäre es unser eigener."
   }
 ];
 
@@ -58,7 +58,7 @@ export default function WhyUsSection() {
             <div className="relative">
               <img
                 src={moversTeam}
-                alt="Professional movers team"
+                alt="Professionelles Umzugsteam"
                 className="rounded-3xl w-full object-cover shadow-lg"
               />
               
@@ -98,16 +98,14 @@ export default function WhyUsSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <span className="text-orange-500 font-semibold tracking-wide uppercase text-xs sm:text-sm">Why Choose Us</span>
+            <span className="text-orange-500 font-semibold tracking-wide uppercase text-xs sm:text-sm">Warum wir</span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mt-3 sm:mt-4 leading-tight">
-              Your Trusted
-              <span className="block text-orange-500">Moving Partner</span>
+              Ihr zuverlässiger
+              <span className="block text-orange-500">Umzugspartner</span>
             </h2>
 
             <p className="text-slate-600 mt-4 sm:mt-6 text-base sm:text-lg leading-relaxed">
-              At Umzuge Tsapenko Transporte, we understand that moving is more than just transporting boxes—it's about 
-              starting a new chapter. Based in Duisburg, we've been helping families and businesses across 
-              North Rhine-Westphalia relocate with ease and confidence.
+              Bei TopSicher Umzüge verstehen wir, dass ein Umzug mehr ist als nur der Transport von Kisten — es ist der Beginn eines neuen Kapitels. Von Duisburg aus helfen wir Familien und Unternehmen in ganz Nordrhein-Westfalen, stressfrei und sicher umzuziehen.
             </p>
 
             {/* Benefits */}

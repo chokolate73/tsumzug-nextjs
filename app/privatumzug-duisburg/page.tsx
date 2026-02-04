@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import PrivatumzugDuisburg from '@/views/duisburg/PrivatumzugDuisburg';
+import { getBaseUrl } from '@/lib/seo/helpers';
 
-const BASE_URL = 'https://tsumzug.de';
+const BASE_URL = getBaseUrl();
 
 export const metadata: Metadata = {
   title: 'Privatumzug Duisburg | Stressfrei umziehen ab 299€',

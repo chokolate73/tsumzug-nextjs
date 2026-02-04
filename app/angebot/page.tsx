@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import Angebot from '@/views/Angebot';
+import { getBaseUrl } from '@/lib/seo/helpers';
 
-const BASE_URL = 'https://tsumzug.de';
+const BASE_URL = getBaseUrl();
 
 export const metadata: Metadata = {
   title: 'Kostenloses Angebot anfordern | TS Umzug Duisburg',

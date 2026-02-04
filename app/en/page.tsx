@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import HomeEn from '@/views/HomeEn';
+import { getBaseUrl } from '@/lib/seo/helpers';
 
-const BASE_URL = 'https://tsumzug.de';
+const BASE_URL = getBaseUrl();
 
 export const metadata: Metadata = {
   title: 'Professional Moving Services in Duisburg & NRW',

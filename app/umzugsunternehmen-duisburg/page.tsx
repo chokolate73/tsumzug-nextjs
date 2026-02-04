@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import UmzugsunternehmenDuisburg from '@/views/duisburg/UmzugsunternehmenDuisburg';
+import { getBaseUrl } from '@/lib/seo/helpers';
 
-const BASE_URL = 'https://tsumzug.de';
+const BASE_URL = getBaseUrl();
 
 export const metadata: Metadata = {
   title: 'Umzugsunternehmen Duisburg | Faire Preise & Versichert',

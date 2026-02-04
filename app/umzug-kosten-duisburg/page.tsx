@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import UmzugKostenDuisburg from '@/views/duisburg/UmzugKostenDuisburg';
+import { getBaseUrl } from '@/lib/seo/helpers';
 
-const BASE_URL = 'https://tsumzug.de';
+const BASE_URL = getBaseUrl();
 
 export const metadata: Metadata = {
   title: 'Umzugskosten Duisburg | Preise & Kostenübersicht 2024',

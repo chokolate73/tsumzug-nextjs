@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import Renovation from '@/views/en/services/Renovation';
+import { getBaseUrl } from '@/lib/seo/helpers';
 
-const BASE_URL = 'https://tsumzug.de';
+const BASE_URL = getBaseUrl();
 
 export const metadata: Metadata = {
   title: 'Renovation Duisburg | Painting from €12/m²',

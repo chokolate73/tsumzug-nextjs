@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import PricesEn from '@/views/en/Prices';
+import { getBaseUrl } from '@/lib/seo/helpers';
 
-const BASE_URL = 'https://tsumzug.de';
+const BASE_URL = getBaseUrl();
 
 export const metadata: Metadata = {
   title: 'Prices Duisburg | All Moving & Service Prices at a Glance',

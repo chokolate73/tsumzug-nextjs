@@ -114,7 +114,7 @@ export default function WhyUsSectionRu() {
             </h2>
 
             <p className="text-slate-600 mt-4 sm:mt-6 text-base sm:text-lg leading-relaxed">
-              В Umzuge Tsapenko Transporte мы понимаем, что переезд — это не просто перевозка коробок,
+              В TopSicher Umzüge мы понимаем, что переезд — это не просто перевозка коробок,
               это начало новой главы. Базируясь в Дуйсбурге, мы помогаем семьям и бизнесу по всей
               Северной Рейн-Вестфалии переезжать легко и уверенно.
             </p>
