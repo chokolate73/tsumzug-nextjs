@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import ResidentialMoves from '@/views/en/services/ResidentialMoves';
+import { getBaseUrl } from '@/lib/seo/helpers';
 
-const BASE_URL = 'https://tsumzug.de';
+const BASE_URL = getBaseUrl();
 
 export const metadata: Metadata = {
   title: 'Residential Moves Duisburg | Stress-Free Moving from €299',

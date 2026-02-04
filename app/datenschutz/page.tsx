@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import Datenschutz from '@/views/Datenschutz';
+import { getBaseUrl } from '@/lib/seo/helpers';
 
-const BASE_URL = 'https://tsumzug.de';
+const BASE_URL = getBaseUrl();
 
 export const metadata: Metadata = {
   title: 'Datenschutzerklärung',

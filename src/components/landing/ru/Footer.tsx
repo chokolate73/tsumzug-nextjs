@@ -135,9 +135,20 @@ export default function FooterRu() {
                   <span className="break-all">info@tsumzug.de</span>
                 </a>
               </li>
-              <li className="flex items-center gap-2 sm:gap-3 text-slate-400 text-sm sm:text-base">
-                <MapPin className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
-                <span>Дуйсбург, NRW, Германия</span>
+              <li>
+                <a
+                  href="https://www.google.com/maps/dir/?api=1&destination=Brückelstraße+54,+47137+Duisburg,+Germany"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-2 sm:gap-3 text-slate-400 hover:text-orange-400 transition-colors text-sm sm:text-base"
+                >
+                  <MapPin className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5" />
+                  <span>
+                    TopSicher Umzüge<br />
+                    Brückelstraße 54<br />
+                    47137 Duisburg, Германия
+                  </span>
+                </a>
               </li>
             </ul>
           </motion.div>

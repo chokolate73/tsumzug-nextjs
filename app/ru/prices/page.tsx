@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import PricesRu from '@/views/ru/Prices';
+import { getBaseUrl } from '@/lib/seo/helpers';
 
-const BASE_URL = 'https://tsumzug.de';
+const BASE_URL = getBaseUrl();
 
 export const metadata: Metadata = {
   title: 'Цены Дуйсбург | Все цены на переезды и услуги',

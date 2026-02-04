@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import Remont from '@/views/ru/services/Remont';
+import { getBaseUrl } from '@/lib/seo/helpers';
 
-const BASE_URL = 'https://tsumzug.de';
+const BASE_URL = getBaseUrl();
 
 export const metadata: Metadata = {
   title: 'Ремонт квартир Дуйсбург | Покраска от 12€/м²',

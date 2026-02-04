@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import UslugiMasterov from '@/views/ru/services/UslugiMasterov';
+import { getBaseUrl } from '@/lib/seo/helpers';
 
-const BASE_URL = 'https://tsumzug.de';
+const BASE_URL = getBaseUrl();
 
 export const metadata: Metadata = {
   title: 'Услуги мастеров Дуйсбург | Профессионально от 35€/час',

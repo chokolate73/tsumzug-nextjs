@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import FirmenumzugDuisburg from '@/views/duisburg/FirmenumzugDuisburg';
+import { getBaseUrl } from '@/lib/seo/helpers';
 
-const BASE_URL = 'https://tsumzug.de';
+const BASE_URL = getBaseUrl();
 
 export const metadata: Metadata = {
   title: 'Firmenumzug Duisburg | Büroumzug ohne Ausfallzeit',

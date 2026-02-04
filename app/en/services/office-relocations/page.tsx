@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import OfficeRelocations from '@/views/en/services/OfficeRelocations';
+import { getBaseUrl } from '@/lib/seo/helpers';
 
-const BASE_URL = 'https://tsumzug.de';
+const BASE_URL = getBaseUrl();
 
 export const metadata: Metadata = {
   title: 'Office Relocation Duisburg | Business Moving with Minimal Downtime',

@@ -29,7 +29,7 @@ const testimonials: Testimonial[] = [{
   name: "Thomas H.",
   location: "Cologne",
   rating: 5,
-  text: "I've used several moving companies, but Tsapenko Transporte was by far the best. Professional packing, no damages, fair prices. Will definitely use again!",
+  text: "I've used several moving companies, but TopSicher Umzüge was by far the best. Professional packing, no damages, fair prices. Will definitely use again!",
   service: "Apartment Move",
   date: "September 2024"
 }, {

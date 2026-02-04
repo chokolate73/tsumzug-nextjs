@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import UborkaVyvoz from '@/views/ru/services/UborkaVyvoz';
+import { getBaseUrl } from '@/lib/seo/helpers';
 
-const BASE_URL = 'https://tsumzug.de';
+const BASE_URL = getBaseUrl();
 
 export const metadata: Metadata = {
   title: 'Уборка и вывоз мусора Дуйсбург | Быстро и честно от 199€',

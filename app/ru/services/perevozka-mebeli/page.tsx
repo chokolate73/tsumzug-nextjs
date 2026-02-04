@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import PerevozkaMebeli from '@/views/ru/services/PerevozkaMebeli';
+import { getBaseUrl } from '@/lib/seo/helpers';
 
-const BASE_URL = 'https://tsumzug.de';
+const BASE_URL = getBaseUrl();
 
 export const metadata: Metadata = {
   title: 'Перевозка мебели Дуйсбург | Гибко и застраховано от 119€',

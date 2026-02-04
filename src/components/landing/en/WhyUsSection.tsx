@@ -104,8 +104,8 @@ export default function WhyUsSectionEn() {
             </h2>
 
             <p className="text-slate-600 mt-4 sm:mt-6 text-base sm:text-lg leading-relaxed">
-              At Umzuge Tsapenko Transporte, we understand that moving is more than just transporting boxes—it's about 
-              starting a new chapter. Based in Duisburg, we've been helping families and businesses across 
+              At TopSicher Umzüge, we understand that moving is more than just transporting boxes—it's about
+              starting a new chapter. Based in Duisburg, we've been helping families and businesses across
               North Rhine-Westphalia relocate with ease and confidence.
             </p>
 
