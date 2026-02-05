@@ -360,15 +360,11 @@ function checkIndexHtml() {
     logWarn('Missing Open Graph tags');
   }
 
-  // Check GA4
-  if (content.includes('googletagmanager.com/gtag')) {
-    if (content.includes('GA_MEASUREMENT_ID')) {
-      logWarn('GA4 script present but ID not configured (placeholder)');
-    } else {
-      logPass('GA4 tracking configured');
-    }
+  // Verify no external analytics scripts leak into the page
+  if (content.includes('googletagmanager.com') || content.includes('google-analytics.com')) {
+    logFail('External analytics script detected — should be removed for GDPR compliance');
   } else {
-    logWarn('GA4 tracking not found');
+    logPass('No external analytics scripts (GDPR compliant)');
   }
 }
 

@@ -294,20 +294,11 @@ Open browser DevTools Console, then:
    - Fill and submit form
    - Console should show: `[Conversion] form_submit {form_name: "quick_contact", source: "/umzugsunternehmen-duisburg"}`
 
-### 4.4 Google Analytics 4 Integration
+### 4.4 Analytics Integration
 
-If GA4 is configured with `gtag`, events will automatically fire to GA4.
-
-Add GA4 tag to `index.html`:
-```html
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
-</script>
-```
+All third-party analytics (GA4, GTM) have been removed for GDPR compliance.
+Tracking is handled via custom `ts_conversion` DOM events that any self-hosted
+analytics solution can listen for. See `src/utils/tracking.ts`.
 
 ---
 

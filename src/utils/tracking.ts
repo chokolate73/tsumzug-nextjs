@@ -1,7 +1,7 @@
 /**
  * Conversion Tracking & Attribution Utilities
  *
- * Events tracked:
+ * Events tracked (via CustomEvent dispatch only — no third-party scripts):
  * - page_view: Page views with attribution
  * - call_click: Phone number clicks
  * - whatsapp_click: WhatsApp button clicks
@@ -10,8 +10,7 @@
  *
  * Features:
  * - UTM parameter persistence in localStorage
- * - GA4 event tracking
- * - Google Ads conversion tracking ready
+ * - Custom event dispatch (ts_conversion) for any self-hosted analytics
  */
 
 import { COMPANY } from '@/config/company';
@@ -126,28 +125,14 @@ export function getFormUTMData(): Record<string, string> {
 }
 
 // ============================================
-// GA4 & Conversion Tracking
+// Conversion Tracking (no third-party scripts)
 // ============================================
 
-declare global {
-  interface Window {
-    gtag?: (...args: any[]) => void;
-    dataLayer?: any[];
-  }
-}
-
 /**
- * Track conversion event to GA4
+ * Track conversion event via custom DOM event.
+ * Any self-hosted analytics listener can subscribe to 'ts_conversion'.
  */
 export function trackConversion(eventName: string, eventData?: Record<string, string | number>) {
-  // Google Analytics 4
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', eventName, {
-      event_category: 'conversion',
-      ...eventData,
-    });
-  }
-
   // Console log for debugging
   if (process.env.NODE_ENV === 'development') {
     console.log(`[Tracking] ${eventName}`, eventData);
@@ -182,14 +167,6 @@ export function trackCallClick(phoneNumber: string, source: string) {
     click_source: source,
     page_path: typeof window !== 'undefined' ? window.location.pathname : '',
   });
-
-  // Google Ads conversion (if configured)
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', 'conversion', {
-      send_to: 'AW-CONVERSION_ID/CONVERSION_LABEL', // Replace with real values
-      event_callback: () => {},
-    });
-  }
 }
 
 /**
@@ -213,14 +190,6 @@ export function trackFormSubmit(formName: string, source: string, formData?: Rec
     form_source: source,
     ...utmData,
   });
-
-  // Google Ads conversion (if configured)
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', 'conversion', {
-      send_to: 'AW-CONVERSION_ID/LEAD_LABEL', // Replace with real values
-      event_callback: () => {},
-    });
-  }
 }
 
 /**
