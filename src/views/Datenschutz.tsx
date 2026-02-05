@@ -188,21 +188,67 @@ export default function Datenschutz() {
               </div>
             </section>
 
-            {/* Section 7 */}
+            {/* Section 7 - Formspree */}
             <section className="mb-10">
               <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
                 <span className="w-8 h-8 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center text-sm font-bold">7</span>
-                Externe Links (z. B. Instagram)
+                Kontaktformulare (Formspree)
               </h2>
-              <p className="text-slate-700 leading-relaxed">
-                Unsere Website kann Links zu externen Diensten (z. B. Instagram) enthalten. Beim bloßen Aufruf unserer Website werden dadurch noch keine Daten an diese Anbieter übertragen. Erst wenn Sie den Link anklicken, verlassen Sie unsere Website und es gelten die Datenschutzbestimmungen des jeweiligen Anbieters.
-              </p>
+              <div className="text-slate-700 leading-relaxed space-y-4">
+                <p>
+                  Unsere Website nutzt Kontaktformulare, die Ihre Angaben (Name, Telefonnummer, Nachricht) an den Dienst <strong>Formspree, Inc.</strong> (USA) zur Weiterleitung an uns übermitteln. Die Daten werden per HTTPS verschlüsselt übertragen.
+                </p>
+                <p>
+                  <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen) bzw. Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an effizienter Kontaktaufnahme).
+                </p>
+                <p>
+                  <strong>Drittlandtransfer:</strong> Formspree hat seinen Sitz in den USA. Die Datenübertragung erfolgt auf Grundlage von Standardvertragsklauseln (Art. 46 Abs. 2 lit. c DSGVO). Weitere Informationen: <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-orange-600">Formspree Datenschutzerklärung</a>.
+                </p>
+              </div>
             </section>
 
-            {/* Section 8 */}
+            {/* Section 8 - WhatsApp */}
             <section className="mb-10">
               <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
                 <span className="w-8 h-8 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center text-sm font-bold">8</span>
+                WhatsApp-Kontakt
+              </h2>
+              <div className="text-slate-700 leading-relaxed space-y-4">
+                <p>
+                  Unsere Website enthält Links, um uns über WhatsApp (Meta Platforms Ireland Ltd.) zu kontaktieren. Beim Klick auf den WhatsApp-Link verlassen Sie unsere Website und es gelten die <a href="https://www.whatsapp.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-orange-500 hover:text-orange-600">Datenschutzbestimmungen von WhatsApp</a>.
+                </p>
+                <p>
+                  Beim bloßen Aufrufen unserer Website werden keine Daten an WhatsApp/Meta übertragen. Die Verbindung wird erst nach Ihrem aktiven Klick hergestellt.
+                </p>
+              </div>
+            </section>
+
+            {/* Section 9 - External Links */}
+            <section className="mb-10">
+              <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                <span className="w-8 h-8 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center text-sm font-bold">9</span>
+                Externe Links (z. B. Instagram, Google Maps)
+              </h2>
+              <p className="text-slate-700 leading-relaxed">
+                Unsere Website kann Links zu externen Diensten (z. B. Instagram, Google Maps) enthalten. Beim bloßen Aufruf unserer Website werden dadurch noch keine Daten an diese Anbieter übertragen. Erst wenn Sie den Link anklicken, verlassen Sie unsere Website und es gelten die Datenschutzbestimmungen des jeweiligen Anbieters.
+              </p>
+            </section>
+
+            {/* Section 10 - No Analytics */}
+            <section className="mb-10">
+              <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                <span className="w-8 h-8 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center text-sm font-bold">10</span>
+                Analyse- und Tracking-Dienste
+              </h2>
+              <p className="text-slate-700 leading-relaxed">
+                Diese Website verwendet <strong>keine</strong> Analyse- oder Tracking-Dienste (z. B. Google Analytics, Google Tag Manager, Facebook Pixel). Es werden keine Cookies oder vergleichbare Technologien zu Marketing- oder Statistikzwecken eingesetzt. Es erfolgen beim Seitenaufruf keine Datenübertragungen an Drittanbieter zu Analysezwecken.
+              </p>
+            </section>
+
+            {/* Section 11 */}
+            <section className="mb-10">
+              <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
+                <span className="w-8 h-8 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center text-sm font-bold">11</span>
                 Ihre Rechte
               </h2>
               <div className="text-slate-700 leading-relaxed space-y-4">
@@ -225,16 +271,16 @@ export default function Datenschutz() {
             {/* Section 9 */}
             <section className="mb-10">
               <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
-                <span className="w-8 h-8 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center text-sm font-bold">9</span>
+                <span className="w-8 h-8 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center text-sm font-bold">12</span>
                 Beschwerderecht bei der Aufsichtsbehörde
               </h2>
               <div className="text-slate-700 leading-relaxed space-y-4">
                 <p>
-                  Sie haben außerdem das Recht, sich bei einer Datenschutzaufsichtsbehörde zu beschweren (Art. 77 DSGVO). Für Unternehmen in Bayern ist regelmäßig zuständig:
+                  Sie haben außerdem das Recht, sich bei einer Datenschutzaufsichtsbehörde zu beschweren (Art. 77 DSGVO). Für Unternehmen in Nordrhein-Westfalen ist zuständig:
                 </p>
                 <div className="bg-slate-50 rounded-xl p-4">
-                  <p className="font-semibold text-slate-900">Bayerisches Landesamt für Datenschutzaufsicht (BayLDA)</p>
-                  <p className="text-slate-600">Promenade 18, 91522 Ansbach, Deutschland</p>
+                  <p className="font-semibold text-slate-900">Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen (LDI NRW)</p>
+                  <p className="text-slate-600">Kavalleriestraße 2-4, 40213 Düsseldorf, Deutschland</p>
                 </div>
               </div>
             </section>
@@ -242,7 +288,7 @@ export default function Datenschutz() {
             {/* Section 10 */}
             <section className="mb-10">
               <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
-                <span className="w-8 h-8 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center text-sm font-bold">10</span>
+                <span className="w-8 h-8 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center text-sm font-bold">13</span>
                 SSL-/TLS-Verschlüsselung
               </h2>
               <p className="text-slate-700 leading-relaxed">
@@ -253,7 +299,7 @@ export default function Datenschutz() {
             {/* Section 11 */}
             <section>
               <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-4 flex items-center gap-3">
-                <span className="w-8 h-8 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center text-sm font-bold">11</span>
+                <span className="w-8 h-8 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center text-sm font-bold">14</span>
                 Aktualität und Änderung dieser Datenschutzerklärung
               </h2>
               <p className="text-slate-700 leading-relaxed">

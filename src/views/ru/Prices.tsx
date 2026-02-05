@@ -134,6 +134,7 @@ export default function PricesPage() {
     name: '',
     phone: '',
     details: '',
+    _gotcha: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -158,6 +159,7 @@ export default function PricesPage() {
           name: formData.name,
           phone: formData.phone,
           message: formData.details,
+          _gotcha: formData._gotcha,
           page: '/ru/prices',
           language: 'ru',
         }),
@@ -168,7 +170,7 @@ export default function PricesPage() {
         toast.success('Спасибо! Мы свяжемся с вами в ближайшее время.');
         setTimeout(() => {
           setIsSubmitted(false);
-          setFormData({ name: '', phone: '', details: '' });
+          setFormData({ name: '', phone: '', details: '', _gotcha: '' });
         }, 3000);
       } else {
         toast.error('Что-то пошло не так. Пожалуйста, попробуйте ещё раз.');
@@ -476,6 +478,9 @@ export default function PricesPage() {
                   </motion.div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">
+                    <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px' }}>
+                      <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" value={formData._gotcha} onChange={(e) => setFormData({ ...formData, _gotcha: e.target.value })} />
+                    </div>
                     <div>
                       <label className="block text-sm font-medium text-slate-700 mb-2">Ваше имя</label>
                       <Input placeholder="Иван Иванов" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} required className="h-12 rounded-xl" />

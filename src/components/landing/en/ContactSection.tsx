@@ -40,7 +40,8 @@ export default function ContactSectionEn() {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
-    details: ''
+    details: '',
+    _gotcha: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -61,6 +62,7 @@ export default function ContactSectionEn() {
           name: formData.name,
           phone: formData.phone,
           message: formData.details,
+          _gotcha: formData._gotcha,
         }),
       });
 
@@ -69,7 +71,7 @@ export default function ContactSectionEn() {
         toast.success('Thank you! We will contact you shortly.');
         setTimeout(() => {
           setIsSubmitted(false);
-          setFormData({ name: '', phone: '', details: '' });
+          setFormData({ name: '', phone: '', details: '', _gotcha: '' });
         }, 3000);
       } else {
         toast.error('Something went wrong. Please try again.');
@@ -198,6 +200,17 @@ export default function ContactSectionEn() {
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Honeypot field - hidden from humans, bots fill it */}
+                  <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px' }}>
+                    <input
+                      type="text"
+                      name="_gotcha"
+                      tabIndex={-1}
+                      autoComplete="off"
+                      value={formData._gotcha}
+                      onChange={(e) => setFormData({ ...formData, _gotcha: e.target.value })}
+                    />
+                  </div>
                   <div>
                     <label className="block text-sm font-medium text-slate-700 mb-2">Your Name</label>
                     <Input

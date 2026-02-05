@@ -7,7 +7,15 @@ const BASE_URL = getBaseUrl();
 export const metadata: Metadata = {
   title: 'Частный переезд Дуйсбург | Без стресса от 299€',
   description: 'Профессиональный частный переезд в Дуйсбурге. Полный сервис: упаковка, сборка мебели и транспортировка. Фиксированные цены, страховка. Бесплатный осмотр!',
-  alternates: { canonical: `${BASE_URL}/ru/services/chastnye-pereezdy` },
+  alternates: {
+    canonical: `${BASE_URL}/ru/services/chastnye-pereezdy`,
+    languages: {
+      'de': `${BASE_URL}/privatumzug-duisburg`,
+      'en': `${BASE_URL}/en/services/residential-moves`,
+      'ru': `${BASE_URL}/ru/services/chastnye-pereezdy`,
+      'x-default': `${BASE_URL}/privatumzug-duisburg`,
+    },
+  },
   openGraph: { title: 'Частный переезд Дуйсбург | Без стресса от 299€', description: 'Профессиональный частный переезд в Дуйсбурге.', url: `${BASE_URL}/ru/services/chastnye-pereezdy`, locale: 'ru_RU' },
 };
 

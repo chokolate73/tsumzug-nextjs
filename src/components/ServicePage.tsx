@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -155,6 +156,7 @@ export default function ServicePage({ service, lang }: ServicePageProps) {
     name: '',
     phone: '',
     details: '',
+    _gotcha: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -202,6 +204,7 @@ export default function ServicePage({ service, lang }: ServicePageProps) {
           name: formData.name,
           phone: formData.phone,
           message: formData.details,
+          _gotcha: formData._gotcha,
           service: service.title[lang],
           language: lang,
         }),
@@ -212,7 +215,7 @@ export default function ServicePage({ service, lang }: ServicePageProps) {
         toast.success(t.thankYou);
         setTimeout(() => {
           setIsSubmitted(false);
-          setFormData({ name: '', phone: '', details: '' });
+          setFormData({ name: '', phone: '', details: '', _gotcha: '' });
         }, 3000);
       } else {
         toast.error(t.errorMessage);
@@ -479,11 +482,15 @@ export default function ServicePage({ service, lang }: ServicePageProps) {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <img
-                src={service.heroImage}
-                alt={service.title[lang]}
-                className="w-full h-80 object-cover rounded-3xl shadow-lg"
-              />
+              <div className="relative w-full h-80 rounded-3xl shadow-lg overflow-hidden">
+                <Image
+                  src={service.heroImage}
+                  alt={service.title[lang]}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
             </motion.div>
 
             <motion.div
@@ -670,6 +677,9 @@ export default function ServicePage({ service, lang }: ServicePageProps) {
                   </motion.div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">
+                    <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px' }}>
+                      <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" value={formData._gotcha} onChange={(e) => setFormData({ ...formData, _gotcha: e.target.value })} />
+                    </div>
                     <div>
                       <label className="block text-sm font-medium text-slate-700 mb-2">
                         {t.yourName}

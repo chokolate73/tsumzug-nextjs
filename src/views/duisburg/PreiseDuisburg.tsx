@@ -127,6 +127,7 @@ export default function PreiseDuisburg() {
     name: '',
     phone: '',
     details: '',
+    _gotcha: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -160,6 +161,7 @@ export default function PreiseDuisburg() {
           name: formData.name,
           phone: formData.phone,
           message: formData.details,
+          _gotcha: formData._gotcha,
           page: '/preise-duisburg',
           language: 'de',
         }),
@@ -171,7 +173,7 @@ export default function PreiseDuisburg() {
         toast.success('Vielen Dank! Wir werden Sie in Kürze kontaktieren.');
         setTimeout(() => {
           setIsSubmitted(false);
-          setFormData({ name: '', phone: '', details: '' });
+          setFormData({ name: '', phone: '', details: '', _gotcha: '' });
         }, 3000);
       } else {
         toast.error('Etwas ist schief gelaufen. Bitte versuchen Sie es erneut.');
@@ -409,6 +411,9 @@ export default function PreiseDuisburg() {
                   </motion.div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">
+                    <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px' }}>
+                      <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" value={formData._gotcha} onChange={(e) => setFormData({ ...formData, _gotcha: e.target.value })} />
+                    </div>
                     <div>
                       <label className="block text-sm font-medium text-slate-700 mb-2">Ihr Name</label>
                       <Input placeholder="Max Müller" value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} required className="h-12 rounded-xl" />

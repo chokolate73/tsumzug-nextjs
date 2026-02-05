@@ -7,7 +7,15 @@ const BASE_URL = getBaseUrl();
 export const metadata: Metadata = {
   title: 'Handyman Services Duisburg | Professional from €35/hour',
   description: 'Professional handyman services in Duisburg. Minor repairs, furniture assembly, property maintenance. Hourly rate or monthly flat rate. Request now!',
-  alternates: { canonical: `${BASE_URL}/en/services/handyman-services` },
+  alternates: {
+    canonical: `${BASE_URL}/en/services/handyman-services`,
+    languages: {
+      'de': `${BASE_URL}/umzugsunternehmen-duisburg`,
+      'en': `${BASE_URL}/en/services/handyman-services`,
+      'ru': `${BASE_URL}/ru/services/uslugi-masterov`,
+      'x-default': `${BASE_URL}/umzugsunternehmen-duisburg`,
+    },
+  },
   openGraph: { title: 'Handyman Services Duisburg | Professional from €35/hour', description: 'Professional handyman services in Duisburg.', url: `${BASE_URL}/en/services/handyman-services`, locale: 'en_GB' },
 };
 

@@ -25,7 +25,7 @@ const duisburgServiceUrls: Record<string, string> = {
 };
 
 const navLinks = [
-  { label: 'Home', href: '#' },
+  { label: 'Home', href: '/' },
   { label: 'Über uns', href: '#about' },
   { label: 'Galerie', href: '#gallery' },
   { label: 'Bewertungen', href: '#testimonials' },
@@ -82,7 +82,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <motion.a
-              href="#"
+              href="/"
               onClick={(e) => { e.preventDefault(); handleNavClick('#'); }}
               className="text-xl font-bold"
               whileHover={{ scale: 1.02 }}
@@ -94,7 +94,7 @@ export default function Navbar() {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-6">
               <motion.a
-                href="#"
+                href="/"
                 onClick={(e) => { e.preventDefault(); handleNavClick('#'); }}
                 whileHover={{ y: -2 }}
                 className="font-medium text-slate-600 hover:text-slate-900 transition-colors"
@@ -201,7 +201,7 @@ export default function Navbar() {
             <div className="container mx-auto px-6 py-6">
               <div className="flex flex-col gap-4">
                 <a
-                  href="#"
+                  href="/"
                   onClick={(e) => { e.preventDefault(); handleNavClick('#'); }}
                   className="text-lg font-medium text-slate-700 hover:text-orange-500 py-2 transition-colors"
                 >

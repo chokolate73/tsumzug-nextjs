@@ -7,7 +7,15 @@ const BASE_URL = getBaseUrl();
 export const metadata: Metadata = {
   title: 'Цены Дуйсбург | Все цены на переезды и услуги',
   description: 'Прозрачные цены на переезды, перевозку мебели, уборку, услуги мастеров и ремонт в Дуйсбурге. Фиксированные цены от 119€. Бесплатный осмотр!',
-  alternates: { canonical: `${BASE_URL}/ru/prices` },
+  alternates: {
+    canonical: `${BASE_URL}/ru/prices`,
+    languages: {
+      'de': `${BASE_URL}/preise-duisburg`,
+      'en': `${BASE_URL}/en/prices`,
+      'ru': `${BASE_URL}/ru/prices`,
+      'x-default': `${BASE_URL}/preise-duisburg`,
+    },
+  },
   openGraph: { title: 'Цены Дуйсбург | Все цены на переезды и услуги', description: 'Прозрачные цены на переезды в Дуйсбурге.', url: `${BASE_URL}/ru/prices`, locale: 'ru_RU' },
 };
 
