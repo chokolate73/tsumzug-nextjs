@@ -7,7 +7,15 @@ const BASE_URL = getBaseUrl();
 export const metadata: Metadata = {
   title: 'Firmenumzug Duisburg | Büroumzug ohne Ausfallzeit',
   description: 'Professioneller Firmenumzug & Büroumzug in Duisburg. IT-Transport, Wochenende möglich. Minimale Ausfallzeit. Festpreis. Jetzt planen!',
-  alternates: { canonical: `${BASE_URL}/firmenumzug-duisburg` },
+  alternates: {
+    canonical: `${BASE_URL}/firmenumzug-duisburg`,
+    languages: {
+      'de': `${BASE_URL}/firmenumzug-duisburg`,
+      'en': `${BASE_URL}/en/services/office-relocations`,
+      'ru': `${BASE_URL}/ru/services/ofisnye-pereezdy`,
+      'x-default': `${BASE_URL}/firmenumzug-duisburg`,
+    },
+  },
   openGraph: { title: 'Firmenumzug Duisburg | Büroumzug ohne Ausfallzeit', description: 'Professioneller Firmenumzug & Büroumzug in Duisburg.', url: `${BASE_URL}/firmenumzug-duisburg`, locale: 'de_DE' },
 };
 

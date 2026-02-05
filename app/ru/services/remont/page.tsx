@@ -7,7 +7,15 @@ const BASE_URL = getBaseUrl();
 export const metadata: Metadata = {
   title: 'Ремонт квартир Дуйсбург | Покраска от 12€/м²',
   description: 'Профессиональный ремонт в Дуйсбурге. Покраска, поклейка обоев, укладка полов. Идеально для сдачи квартиры. Честные цены. Запросите сейчас!',
-  alternates: { canonical: `${BASE_URL}/ru/services/remont` },
+  alternates: {
+    canonical: `${BASE_URL}/ru/services/remont`,
+    languages: {
+      'de': `${BASE_URL}/renovierung-duisburg`,
+      'en': `${BASE_URL}/en/services/renovation`,
+      'ru': `${BASE_URL}/ru/services/remont`,
+      'x-default': `${BASE_URL}/renovierung-duisburg`,
+    },
+  },
   openGraph: { title: 'Ремонт квартир Дуйсбург | Покраска от 12€/м²', description: 'Профессиональный ремонт в Дуйсбурге.', url: `${BASE_URL}/ru/services/remont`, locale: 'ru_RU' },
 };
 

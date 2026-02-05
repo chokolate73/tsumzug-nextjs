@@ -7,7 +7,15 @@ const BASE_URL = getBaseUrl();
 export const metadata: Metadata = {
   title: 'Entrümpelung Duisburg | Schnell & fair ab 199€',
   description: 'Professionelle Entrümpelung in Duisburg. Wohnung, Keller, Dachboden. Fachgerechte Entsorgung, kurzfristige Termine. Festpreis. Jetzt anfragen!',
-  alternates: { canonical: `${BASE_URL}/entruempelung-duisburg` },
+  alternates: {
+    canonical: `${BASE_URL}/entruempelung-duisburg`,
+    languages: {
+      'de': `${BASE_URL}/entruempelung-duisburg`,
+      'en': `${BASE_URL}/en/services/clearance-disposal`,
+      'ru': `${BASE_URL}/ru/services/uborka-vyvoz`,
+      'x-default': `${BASE_URL}/entruempelung-duisburg`,
+    },
+  },
   openGraph: { title: 'Entrümpelung Duisburg | Schnell & fair ab 199€', description: 'Professionelle Entrümpelung in Duisburg.', url: `${BASE_URL}/entruempelung-duisburg`, locale: 'de_DE' },
 };
 

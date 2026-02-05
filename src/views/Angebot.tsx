@@ -37,6 +37,7 @@ export default function Angebot() {
     wohnungsgroesse: '',
     umzugstermin: '',
     details: '',
+    _gotcha: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -63,6 +64,7 @@ export default function Angebot() {
           wohnungsgroesse: formData.wohnungsgroesse,
           umzugstermin: formData.umzugstermin,
           message: formData.details,
+          _gotcha: formData._gotcha,
           page: '/angebot',
           type: 'Angebotsanfrage',
         }),
@@ -83,6 +85,7 @@ export default function Angebot() {
             wohnungsgroesse: '',
             umzugstermin: '',
             details: '',
+            _gotcha: '',
           });
         }, 5000);
       } else {
@@ -226,6 +229,9 @@ export default function Angebot() {
                   </motion.div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">
+                    <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px' }}>
+                      <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" value={formData._gotcha} onChange={(e) => setFormData({ ...formData, _gotcha: e.target.value })} />
+                    </div>
                     <div className="grid sm:grid-cols-2 gap-6">
                       <div>
                         <label className="block text-sm font-medium text-slate-700 mb-2">Ihr Name *</label>

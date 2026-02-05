@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -466,6 +467,7 @@ export default function LocalSEOPage({
     name: '',
     phone: '',
     details: '',
+    _gotcha: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -506,6 +508,7 @@ export default function LocalSEOPage({
           name: formData.name,
           phone: formData.phone,
           message: formData.details,
+          _gotcha: formData._gotcha,
           page: canonicalPath,
           language: lang,
         }),
@@ -517,7 +520,7 @@ export default function LocalSEOPage({
         toast.success(t.toast.success);
         setTimeout(() => {
           setIsSubmitted(false);
-          setFormData({ name: '', phone: '', details: '' });
+          setFormData({ name: '', phone: '', details: '', _gotcha: '' });
         }, 3000);
       } else {
         toast.error(t.toast.error);
@@ -670,7 +673,9 @@ export default function LocalSEOPage({
         <div className="container mx-auto px-6 md:px-12">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-              <img src={heroImage} alt={h1} className="w-full h-80 object-cover rounded-3xl shadow-lg" />
+              <div className="relative w-full h-80 rounded-3xl shadow-lg overflow-hidden">
+                <Image src={heroImage} alt={h1} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
+              </div>
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
               <div className="prose prose-lg max-w-none">
@@ -972,6 +977,9 @@ export default function LocalSEOPage({
                   </motion.div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">
+                    <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px' }}>
+                      <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" value={formData._gotcha} onChange={(e) => setFormData({ ...formData, _gotcha: e.target.value })} />
+                    </div>
                     <div>
                       <label className="block text-sm font-medium text-slate-700 mb-2">{t.contact.yourName}</label>
                       <Input placeholder={t.contact.namePlaceholder} value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} required className="h-12 rounded-xl" />

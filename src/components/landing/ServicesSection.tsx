@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import serviceTransport from '@/assets/service-transport.jpg';
 import { Home, Trash2, Truck, Building2, Wrench, PaintBucket, Piano, Package, Warehouse, Sparkles, Plug, Hammer, LucideIcon, ArrowRight } from 'lucide-react';
 interface Service {
@@ -115,7 +116,7 @@ const ServiceCard = ({
   }} className="group relative bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300">
       {/* Image */}
       <div className="relative h-48 overflow-hidden">
-        <img src={service.image} alt={service.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform" />
+        <Image src={service.image} alt={service.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform" />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent" />
 
         {/* Icon Badge */}
