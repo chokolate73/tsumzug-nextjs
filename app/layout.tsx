@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import Providers from '@/components/Providers';
 import './globals.css';
-import Script from 'next/script';
 import { getBaseUrl } from '@/lib/seo/helpers';
 
 export const metadata: Metadata = {
@@ -38,25 +37,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="de" suppressHydrationWarning>
-      <head>
-        {/* Google Analytics 4 */}
-        {/* TODO: Replace GA_MEASUREMENT_ID with your actual GA4 ID (format: G-XXXXXXXXXX) */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'GA_MEASUREMENT_ID');
-          `}
-        </Script>
-        {/* DNS Prefetch for external resources */}
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
-      </head>
+      <head />
       <body>
         <Providers>
           {children}
