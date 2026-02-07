@@ -1,13 +1,14 @@
 import type { Metadata } from 'next';
 import Renovierung from '@/views/services/Renovierung';
 import { getBaseUrl } from '@/lib/seo/helpers';
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 
 const BASE_URL = getBaseUrl();
 
 export const metadata: Metadata = {
-  title: 'Renovierung Duisburg - Malerarbeiten & Bodenverlegung',
+  title: 'Renovierung Duisburg | Malerarbeiten & Bodenverlegung',
   description: 'Professionelle Renovierung in Duisburg. Malerarbeiten, Tapezieren, Laminat verlegen & Endreinigung. Für Übergabe oder Einzug ✓ Jetzt anfragen!',
-  keywords: 'Renovierung, Malerarbeiten, Tapezieren, Laminat verlegen, Wohnungsrenovierung Duisburg, Streichen',
+  keywords: 'Renovierung Duisburg, Malerarbeiten Duisburg, Tapezieren, Laminat verlegen, Wohnungsrenovierung Duisburg, Streichen',
   alternates: {
     canonical: `${BASE_URL}/renovierung`,
     languages: {
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Renovierung Duisburg - Malerarbeiten & Bodenverlegung',
+    title: 'Renovierung Duisburg | Malerarbeiten & Bodenverlegung',
     description: 'Professionelle Renovierung in Duisburg. Malerarbeiten, Tapezieren, Laminat verlegen & Endreinigung.',
     url: `${BASE_URL}/renovierung`,
     locale: 'de_DE',
@@ -26,5 +27,13 @@ export const metadata: Metadata = {
 };
 
 export default function RenovierungPage() {
-  return <Renovierung />;
+  return (
+    <>
+      <BreadcrumbSchema items={[
+        { name: 'Startseite', path: '/' },
+        { name: 'Renovierung', path: '/renovierung' },
+      ]} />
+      <Renovierung />
+    </>
+  );
 }

@@ -96,8 +96,8 @@ export default function FAQSection() {
         >
           <span className="text-orange-500 font-semibold tracking-wide uppercase text-xs sm:text-sm">FAQ</span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mt-3 sm:mt-4 leading-tight">
-            Häufig gestellte
-            <span className="text-slate-400"> Fragen</span>
+            Häufige Fragen zum
+            <span className="text-slate-400"> Umzug in Duisburg</span>
           </h2>
           <p className="text-slate-600 mt-4 sm:mt-6 text-base sm:text-lg">
             Hier finden Sie Antworten auf die häufigsten Fragen zu unseren Umzugs- und Transportdienstleistungen.

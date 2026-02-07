@@ -1,13 +1,14 @@
 import type { Metadata } from 'next';
 import Firmenumzuege from '@/views/services/Firmenumzuege';
 import { getBaseUrl } from '@/lib/seo/helpers';
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 
 const BASE_URL = getBaseUrl();
 
 export const metadata: Metadata = {
-  title: 'Firmenumzüge & Büroumzüge Duisburg - Minimale Ausfallzeit',
-  description: 'Professionelle Firmenumzüge in Duisburg und NRW. IT-Transport, Büromöbel Montage & Umzug außerhalb der Arbeitszeit. Minimale Ausfallzeit ✓ Jetzt anfragen!',
-  keywords: 'Firmenumzug, Büroumzug, Gewerbeumzug, IT-Umzug, Umzugsfirma Unternehmen, Büroumzug NRW',
+  title: 'Firmenumzug Duisburg | Büroumzug mit minimaler Ausfallzeit',
+  description: 'Professioneller Firmenumzug & Büroumzug in Duisburg und NRW. IT-Transport, Büromöbel Montage & Umzug außerhalb der Arbeitszeit. Minimale Ausfallzeit ✓ Jetzt anfragen!',
+  keywords: 'Firmenumzug Duisburg, Büroumzug Duisburg, Gewerbeumzug, IT-Umzug, Umzugsfirma Unternehmen, Büroumzug NRW',
   alternates: {
     canonical: `${BASE_URL}/firmenumzuege`,
     languages: {
@@ -18,13 +19,21 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Firmenumzüge & Büroumzüge Duisburg - Minimale Ausfallzeit',
-    description: 'Professionelle Firmenumzüge in Duisburg und NRW. IT-Transport, Büromöbel Montage & Umzug außerhalb der Arbeitszeit.',
+    title: 'Firmenumzug Duisburg | Büroumzug mit minimaler Ausfallzeit',
+    description: 'Professioneller Firmenumzug & Büroumzug in Duisburg und NRW. IT-Transport, Büromöbel Montage.',
     url: `${BASE_URL}/firmenumzuege`,
     locale: 'de_DE',
   },
 };
 
 export default function FirmenumzuegePage() {
-  return <Firmenumzuege />;
+  return (
+    <>
+      <BreadcrumbSchema items={[
+        { name: 'Startseite', path: '/' },
+        { name: 'Firmenumzüge', path: '/firmenumzuege' },
+      ]} />
+      <Firmenumzuege />
+    </>
+  );
 }
