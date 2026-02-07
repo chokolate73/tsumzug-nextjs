@@ -6,9 +6,9 @@ import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 const BASE_URL = getBaseUrl();
 
 export const metadata: Metadata = {
-  title: 'Firmenumzug Duisburg | Büroumzug mit minimaler Ausfallzeit',
-  description: 'Professioneller Firmenumzug & Büroumzug in Duisburg und NRW. IT-Transport, Büromöbel Montage & Umzug außerhalb der Arbeitszeit. Minimale Ausfallzeit ✓ Jetzt anfragen!',
-  keywords: 'Firmenumzug Duisburg, Büroumzug Duisburg, Gewerbeumzug, IT-Umzug, Umzugsfirma Unternehmen, Büroumzug NRW',
+  title: 'Firmenumzug Duisburg | Büroumzug & Gewerbeumzug – TopSicher Umzüge',
+  description: 'Firmenumzug in Duisburg ✓ Büroumzug mit IT-Transport ✓ Umzug außerhalb der Arbeitszeit ✓ Auch am Wochenende ✓ Möbelmontage inklusive. Jetzt Angebot anfordern!',
+  keywords: 'Firmenumzug Duisburg, Büroumzug Duisburg, Gewerbeumzug Duisburg, IT-Umzug Duisburg, Umzug außerhalb der Arbeitszeit, Büroumzug mit Möbelmontage, Praxisumzug Duisburg, Umzug am Wochenende Duisburg',
   alternates: {
     canonical: `${BASE_URL}/firmenumzuege`,
     languages: {
@@ -19,8 +19,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Firmenumzug Duisburg | Büroumzug mit minimaler Ausfallzeit',
-    description: 'Professioneller Firmenumzug & Büroumzug in Duisburg und NRW. IT-Transport, Büromöbel Montage.',
+    title: 'Firmenumzug Duisburg | Büroumzug & Gewerbeumzug – TopSicher Umzüge',
+    description: 'Firmenumzug in Duisburg ✓ Büroumzug mit IT-Transport ✓ Umzug außerhalb der Arbeitszeit ✓ Möbelmontage inklusive.',
     url: `${BASE_URL}/firmenumzuege`,
     locale: 'de_DE',
   },

@@ -6,9 +6,9 @@ import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 const BASE_URL = getBaseUrl();
 
 export const metadata: Metadata = {
-  title: 'Privatumzug Duisburg | Stressfrei umziehen zum Festpreis',
-  description: 'Professioneller Privatumzug in Duisburg und NRW. Komplettservice inkl. Verpackung, Möbelmontage & Transport. Festpreisgarantie ✓ Versichert ✓ Jetzt Angebot anfordern!',
-  keywords: 'Privatumzug Duisburg, Wohnungsumzug Duisburg, Umzugsfirma Duisburg, Umzug Festpreis, Umzugshelfer Duisburg, Umzugsservice NRW',
+  title: 'Privatumzug Duisburg | TopSicher Umzüge – Festpreis & Full-Service',
+  description: 'Privatumzug in Duisburg zum Festpreis ✓ Full-Service Umzug ✓ Möbelmontage ✓ Packservice ✓ Versicherter Transport ✓ Auch am Wochenende. Jetzt kostenloses Angebot anfordern!',
+  keywords: 'Privatumzug Duisburg, Umzugsfirma Duisburg, Umzugsservice Duisburg, Umzug Festpreis Duisburg, Full-Service Umzug, Umzugskosten Duisburg, Expressumzug Duisburg, Seniorenumzug Duisburg, Studentenumzug Duisburg, Wochenendumzug, versicherter Umzug, Möbelmontage Umzug',
   alternates: {
     canonical: `${BASE_URL}/privatumzuege`,
     languages: {
@@ -19,8 +19,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Privatumzug Duisburg | Stressfrei umziehen zum Festpreis',
-    description: 'Professioneller Privatumzug in Duisburg und NRW. Komplettservice inkl. Verpackung, Möbelmontage & Transport.',
+    title: 'Privatumzug Duisburg | TopSicher Umzüge – Festpreis & Full-Service',
+    description: 'Privatumzug in Duisburg zum Festpreis ✓ Full-Service Umzug ✓ Möbelmontage ✓ Packservice ✓ Versicherter Transport.',
     url: `${BASE_URL}/privatumzuege`,
     locale: 'de_DE',
   },

@@ -38,6 +38,9 @@ type Lang = 'de' | 'en' | 'ru';
 interface ServicePageProps {
   service: ServiceData;
   lang: Lang;
+  customTitle?: string;
+  customSubtitle?: string;
+  customContent?: React.ReactNode;
 }
 
 const translations = {
@@ -148,7 +151,7 @@ const languages = [
   { code: 'ru' as Lang, label: 'Русский', flag: '🇷🇺', path: '/ru' },
 ];
 
-export default function ServicePage({ service, lang }: ServicePageProps) {
+export default function ServicePage({ service, lang, customTitle, customSubtitle, customContent }: ServicePageProps) {
   const router = useRouter();
   const t = translations[lang];
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -441,9 +444,9 @@ export default function ServicePage({ service, lang }: ServicePageProps) {
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-              {service.title[lang]}
+              {customTitle || service.title[lang]}
             </h1>
-            <p className="text-xl text-slate-300 mt-4 max-w-2xl">{service.subtitle[lang]}</p>
+            <p className="text-xl text-slate-300 mt-4 max-w-2xl">{customSubtitle || service.subtitle[lang]}</p>
 
             <div className="flex flex-wrap gap-4 mt-8">
               <Button
@@ -472,105 +475,111 @@ export default function ServicePage({ service, lang }: ServicePageProps) {
         </div>
       </section>
 
-      {/* Description Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6 md:px-12">
-          <div className="grid md:grid-cols-2 gap-12 items-start">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <div className="relative w-full h-80 rounded-3xl shadow-lg overflow-hidden">
-                <Image
-                  src={service.heroImage}
-                  alt={service.title[lang]}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover"
-                />
-              </div>
-            </motion.div>
+      {customContent ? (
+        customContent
+      ) : (
+        <>
+          {/* Description Section */}
+          <section className="py-16 bg-white">
+            <div className="container mx-auto px-6 md:px-12">
+              <div className="grid md:grid-cols-2 gap-12 items-start">
+                <motion.div
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <div className="relative w-full h-80 rounded-3xl shadow-lg overflow-hidden">
+                    <Image
+                      src={service.heroImage}
+                      alt={service.title[lang]}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover"
+                    />
+                  </div>
+                </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <div className="prose prose-lg max-w-none">
-                {service.longDescription[lang].split('\n\n').map((paragraph, index) => (
-                  <p key={index} className="text-slate-600 leading-relaxed mb-4">
-                    {paragraph}
-                  </p>
-                ))}
+                <motion.div
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <div className="prose prose-lg max-w-none">
+                    {service.longDescription[lang].split('\n\n').map((paragraph, index) => (
+                      <p key={index} className="text-slate-600 leading-relaxed mb-4">
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+                </motion.div>
               </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+            </div>
+          </section>
 
-      {/* Features & Benefits Section */}
-      <section className="py-16 bg-slate-50">
-        <div className="container mx-auto px-6 md:px-12">
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Features */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="text-2xl font-bold text-slate-900 mb-6">{t.features}</h2>
-              <div className="space-y-4">
-                {service.features[lang].map((feature, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                    className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm"
-                  >
-                    <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Check className="w-5 h-5 text-orange-500" />
-                    </div>
-                    <span className="text-slate-700 font-medium">{feature}</span>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
+          {/* Features & Benefits Section */}
+          <section className="py-16 bg-slate-50">
+            <div className="container mx-auto px-6 md:px-12">
+              <div className="grid md:grid-cols-2 gap-12">
+                {/* Features */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <h2 className="text-2xl font-bold text-slate-900 mb-6">{t.features}</h2>
+                  <div className="space-y-4">
+                    {service.features[lang].map((feature, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: index * 0.1 }}
+                        className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm"
+                      >
+                        <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <Check className="w-5 h-5 text-orange-500" />
+                        </div>
+                        <span className="text-slate-700 font-medium">{feature}</span>
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
 
-            {/* Benefits */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <h2 className="text-2xl font-bold text-slate-900 mb-6">{t.benefits}</h2>
-              <div className="space-y-4">
-                {service.benefits[lang].map((benefit, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                    className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm"
-                  >
-                    <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <CheckCircle className="w-5 h-5 text-green-500" />
-                    </div>
-                    <span className="text-slate-700 font-medium">{benefit}</span>
-                  </motion.div>
-                ))}
+                {/* Benefits */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                >
+                  <h2 className="text-2xl font-bold text-slate-900 mb-6">{t.benefits}</h2>
+                  <div className="space-y-4">
+                    {service.benefits[lang].map((benefit, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, x: 20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: index * 0.1 }}
+                        className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm"
+                      >
+                        <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <CheckCircle className="w-5 h-5 text-green-500" />
+                        </div>
+                        <span className="text-slate-700 font-medium">{benefit}</span>
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
               </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+            </div>
+          </section>
+        </>
+      )}
 
       {/* Contact Form Section */}
       <section className="py-16 bg-slate-900 relative overflow-hidden">
