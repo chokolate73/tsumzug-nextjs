@@ -171,7 +171,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-slate-800">
-        <div className="container mx-auto px-4 sm:px-6 md:px-12 py-4 sm:py-6">
+        <div className="container mx-auto px-4 sm:px-6 md:px-12 py-4 sm:py-6 pb-20 md:pb-6">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4">
             <div className="flex flex-wrap items-center gap-2 sm:gap-4">
               <p className="text-slate-500 text-xs sm:text-sm text-center sm:text-left">
