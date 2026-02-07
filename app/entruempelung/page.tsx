@@ -6,9 +6,9 @@ import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 const BASE_URL = getBaseUrl();
 
 export const metadata: Metadata = {
-  title: 'Entrümpelung Duisburg | Haushaltsauflösung & Sperrmüll',
-  description: 'Professionelle Entrümpelung in Duisburg und NRW. Haushaltsauflösung, Kellerentrümpelung & Sperrmüll. Schnell & umweltgerecht ✓ Festpreise ✓ Jetzt anfragen!',
-  keywords: 'Entrümpelung Duisburg, Haushaltsauflösung Duisburg, Sperrmüll Entsorgung, Kellerentrümpelung, Wohnungsauflösung Duisburg',
+  title: 'Entrümpelung Duisburg | Haushaltsauflösung & Entsorgung – TopSicher',
+  description: 'Entrümpelung in Duisburg ✓ Haushaltsauflösung ✓ Keller & Dachboden ✓ Sperrmüll Entsorgung ✓ Besenrein ✓ Schnell & umweltgerecht. Jetzt Angebot einholen!',
+  keywords: 'Entrümpelung Duisburg, Haushaltsauflösung Duisburg, Wohnungsauflösung Duisburg, Kellerentrümpelung Duisburg, Sperrmüll Entsorgung Duisburg, Dachboden entrümpeln Duisburg, Entrümpelung besenrein Duisburg, Nachlassauflösung Duisburg',
   alternates: {
     canonical: `${BASE_URL}/entruempelung`,
     languages: {
@@ -19,8 +19,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Entrümpelung Duisburg | Haushaltsauflösung & Sperrmüll',
-    description: 'Professionelle Entrümpelung in Duisburg und NRW. Haushaltsauflösung, Kellerentrümpelung & Sperrmüll.',
+    title: 'Entrümpelung Duisburg | Haushaltsauflösung & Entsorgung – TopSicher',
+    description: 'Entrümpelung in Duisburg ✓ Haushaltsauflösung ✓ Keller & Dachboden ✓ Sperrmüll Entsorgung ✓ Besenrein.',
     url: `${BASE_URL}/entruempelung`,
     locale: 'de_DE',
   },

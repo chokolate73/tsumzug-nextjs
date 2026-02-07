@@ -6,9 +6,9 @@ import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 const BASE_URL = getBaseUrl();
 
 export const metadata: Metadata = {
-  title: 'Hausmeisterservice Duisburg | Möbelmontage & Handwerker',
-  description: 'Professioneller Hausmeisterservice in Duisburg. IKEA Möbelmontage, Küchenmontage, Lampen aufhängen & Geräteanschluss. Schnell & zuverlässig ✓ Jetzt anfragen!',
-  keywords: 'Hausmeisterservice Duisburg, Möbelmontage Duisburg, IKEA Aufbau, Handwerker Duisburg, Küchenmontage, Geräteanschluss',
+  title: 'Hausmeisterservice Duisburg | Möbelmontage & Kleinreparaturen – TopSicher',
+  description: 'Hausmeisterservice in Duisburg ✓ IKEA Möbelmontage ✓ Küchenmontage ✓ Kleinreparaturen ✓ Lampen & Regale aufhängen ✓ Zuverlässig & schnell. Jetzt anfragen!',
+  keywords: 'Hausmeisterservice Duisburg, Kleinreparaturen Duisburg, Gebäudeservice Duisburg, Möbelmontage Duisburg, IKEA Aufbau, Küchenmontage, Facility Service Duisburg, Objektbetreuung Duisburg',
   alternates: {
     canonical: `${BASE_URL}/hausmeisterservice`,
     languages: {
@@ -19,8 +19,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Hausmeisterservice Duisburg | Möbelmontage & Handwerker',
-    description: 'Professioneller Hausmeisterservice in Duisburg. IKEA Möbelmontage, Küchenmontage, Lampen aufhängen.',
+    title: 'Hausmeisterservice Duisburg | Möbelmontage & Kleinreparaturen – TopSicher',
+    description: 'Hausmeisterservice in Duisburg ✓ IKEA Möbelmontage ✓ Küchenmontage ✓ Kleinreparaturen ✓ Zuverlässig & schnell.',
     url: `${BASE_URL}/hausmeisterservice`,
     locale: 'de_DE',
   },

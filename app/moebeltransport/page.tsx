@@ -6,9 +6,9 @@ import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 const BASE_URL = getBaseUrl();
 
 export const metadata: Metadata = {
-  title: 'Möbeltransport Duisburg & NRW | Günstig & Versichert',
-  description: 'Günstiger Möbeltransport in Duisburg und NRW. Einzelstücke oder Komplettladung. Versichert ✓ Flexibel ✓ Deutschlandweit ✓ Jetzt anfragen!',
-  keywords: 'Möbeltransport Duisburg, Möbelspedition, Gütertransport, Lieferservice Möbel, Transport Duisburg, Möbellieferung NRW',
+  title: 'Möbeltransport Duisburg | Einzelstücke & Großgeräte – TopSicher Umzüge',
+  description: 'Möbeltransport in Duisburg ✓ Sofa, Schrank, Waschmaschine ✓ Klaviertransport ✓ IKEA Abholung ✓ Versichert ✓ Ab Einzelstück. Jetzt Angebot anfordern!',
+  keywords: 'Möbeltransport Duisburg, Kleintransport Duisburg, Einzelstück Transport Duisburg, Klaviertransport Duisburg, IKEA Abholung Duisburg, Sofa Transport Duisburg, Waschmaschine Transport Duisburg, Möbel liefern lassen Duisburg',
   alternates: {
     canonical: `${BASE_URL}/moebeltransport`,
     languages: {
@@ -19,8 +19,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Möbeltransport Duisburg & NRW | Günstig & Versichert',
-    description: 'Günstiger Möbeltransport in Duisburg und NRW. Einzelstücke oder Komplettladung.',
+    title: 'Möbeltransport Duisburg | Einzelstücke & Großgeräte – TopSicher Umzüge',
+    description: 'Möbeltransport in Duisburg ✓ Sofa, Schrank, Waschmaschine ✓ Klaviertransport ✓ IKEA Abholung ✓ Versichert.',
     url: `${BASE_URL}/moebeltransport`,
     locale: 'de_DE',
   },
