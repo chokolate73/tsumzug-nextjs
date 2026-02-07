@@ -206,9 +206,12 @@ export default function Navbar() {
                 </a>
                 
                 {/* Mobile Services Links */}
-                <div className="border-l-2 border-orange-200 pl-4">
-                  <span className="text-sm font-semibold text-slate-500 uppercase tracking-wide">Leistungen</span>
-                  <div className="flex flex-col gap-2 mt-2">
+                <details className="group">
+                  <summary className="text-lg font-medium text-slate-700 hover:text-orange-500 py-2 transition-colors cursor-pointer list-none [&::-webkit-details-marker]:hidden flex items-center justify-between">
+                    Leistungen
+                    <ChevronDown className="w-4 h-4 transition-transform duration-200 group-open:rotate-180" />
+                  </summary>
+                  <div className="border-l-2 border-orange-200 pl-4 mt-2 flex flex-col gap-2">
                     {services.map((service) => (
                       <Link
                         key={service.id}
@@ -221,7 +224,7 @@ export default function Navbar() {
                       </Link>
                     ))}
                   </div>
-                </div>
+                </details>
 
                 {navLinks.slice(1).map((link) => (
                   <a
