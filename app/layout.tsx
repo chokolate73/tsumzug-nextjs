@@ -57,6 +57,7 @@ export const metadata: Metadata = {
     'geo.placename': 'Duisburg',
     'geo.position': '51.47270;6.78282',
     'ICBM': '51.47270, 6.78282',
+    'llms-txt': `${BASE_URL}/llms.txt`,
   },
 };
 
