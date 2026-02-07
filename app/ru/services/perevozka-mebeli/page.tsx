@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       'x-default': `${BASE_URL}/moebeltransport`,
     },
   },
-  openGraph: { title: 'Перевозка мебели Дуйсбург | Гибко и застраховано от 119€', description: 'Доступная перевозка мебели в Дуйсбурге.', url: `${BASE_URL}/ru/services/perevozka-mebeli`, locale: 'ru_RU' },
+  openGraph: { title: 'Перевозка мебели Дуйсбург | Гибко и застраховано от 119€', description: 'Доступная перевозка мебели в Дуйсбурге.', url: `${BASE_URL}/ru/services/perevozka-mebeli`, locale: 'ru_RU', type: 'website', images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'TopSicher Umzüge – Транспортная компания в Дуйсбурге' }] },
 };
 
 export default function PerevozkaMebeliPage() {

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       'x-default': `${BASE_URL}/hausmeisterservice`,
     },
   },
-  openGraph: { title: 'Услуги мастеров Дуйсбург | Профессионально от 35€/час', description: 'Профессиональные услуги мастеров в Дуйсбурге.', url: `${BASE_URL}/ru/services/uslugi-masterov`, locale: 'ru_RU' },
+  openGraph: { title: 'Услуги мастеров Дуйсбург | Профессионально от 35€/час', description: 'Профессиональные услуги мастеров в Дуйсбурге.', url: `${BASE_URL}/ru/services/uslugi-masterov`, locale: 'ru_RU', type: 'website', images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'TopSicher Umzüge – Транспортная компания в Дуйсбурге' }] },
 };
 
 export default function UslugiMasterovPage() {

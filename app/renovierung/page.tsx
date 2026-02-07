@@ -23,6 +23,8 @@ export const metadata: Metadata = {
     description: 'Renovierung in Duisburg ✓ Wände streichen ✓ Tapezieren ✓ Laminat & Vinyl verlegen ✓ Endreinigung.',
     url: `${BASE_URL}/renovierung`,
     locale: 'de_DE',
+    type: 'website',
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'TopSicher Umzüge – Umzugsfirma in Duisburg' }],
   },
 };
 

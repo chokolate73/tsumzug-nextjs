@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       'x-default': `${BASE_URL}/renovierung`,
     },
   },
-  openGraph: { title: 'Renovation Duisburg | Painting from €12/m²', description: 'Professional renovation in Duisburg.', url: `${BASE_URL}/en/services/renovation`, locale: 'en_GB' },
+  openGraph: { title: 'Renovation Duisburg | Painting from €12/m²', description: 'Professional renovation in Duisburg.', url: `${BASE_URL}/en/services/renovation`, locale: 'en_GB', type: 'website', images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'TopSicher Umzüge – Moving Company in Duisburg' }] },
 };
 
 export default function RenovationPage() {

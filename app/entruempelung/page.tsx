@@ -23,6 +23,8 @@ export const metadata: Metadata = {
     description: 'Entrümpelung in Duisburg ✓ Haushaltsauflösung ✓ Keller & Dachboden ✓ Sperrmüll Entsorgung ✓ Besenrein.',
     url: `${BASE_URL}/entruempelung`,
     locale: 'de_DE',
+    type: 'website',
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'TopSicher Umzüge – Umzugsfirma in Duisburg' }],
   },
 };
 

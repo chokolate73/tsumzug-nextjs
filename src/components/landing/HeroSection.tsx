@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Button } from "@/components/ui/button";
 import { Phone, Clock, CheckCircle, MessageCircle, Mail } from 'lucide-react';
 import heroBackground from '@/assets/hero-background.jpg';
 import heroBackgroundMobile from '@/assets/hero-background-mobile.png';
@@ -13,22 +12,17 @@ export default function HeroSection() {
 
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-      {/* Background Image - Mobile (LCP optimized with img tag) */}
-      <img
-        src={heroBackgroundMobile}
-        alt="Umzugsfirma Duisburg – TopSicher Umzüge Team beim Privatumzug"
-        fetchPriority="high"
-        decoding="async"
-        className="absolute inset-0 w-full h-full object-cover md:hidden"
-      />
-      {/* Background Image - Desktop (LCP optimized with img tag) */}
-      <img
-        src={heroBackground}
-        alt="Umzugsunternehmen Duisburg – TopSicher Umzüge professioneller Umzugsservice"
-        fetchPriority="high"
-        decoding="async"
-        className="absolute inset-0 w-full h-full object-cover hidden md:block"
-      />
+      {/* Background Image - single <picture> so browser only downloads the needed variant */}
+      <picture className="absolute inset-0 w-full h-full">
+        <source media="(min-width: 768px)" srcSet={heroBackground} />
+        <img
+          src={heroBackgroundMobile}
+          alt="Umzugsfirma Duisburg – TopSicher Umzüge Team beim professionellen Umzugsservice"
+          fetchPriority="high"
+          decoding="async"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      </picture>
       <div className="absolute inset-0 bg-white/75" />
 
       <div className="container mx-auto px-4 sm:px-6 md:px-12 relative z-10">
@@ -53,7 +47,7 @@ export default function HeroSection() {
             className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 bg-blue-50 rounded-full mb-6 sm:mb-8 md:mb-10"
           >
             <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-blue-500" />
-            <span className="text-blue-700 font-medium text-sm sm:text-base md:text-lg">Rund um die Uhr erreichbar</span>
+            <span className="text-blue-700 font-medium text-sm sm:text-base md:text-lg">Schnelle Rückmeldung – auch kurzfristig</span>
           </motion.div>
 
           {/* Main Heading */}
@@ -75,23 +69,6 @@ export default function HeroSection() {
           >
             Ihre <strong>Umzugsfirma in Duisburg</strong> – zuverlässig, versichert und zum Festpreis. Privatumzug, Firmenumzug und Full-Service in ganz NRW.
           </motion.p>
-
-          {/* CTA Button */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="mb-6 sm:mb-8 md:mb-10"
-          >
-            <Button
-              size="lg"
-              className="bg-orange-500 hover:bg-orange-600 text-white px-6 sm:px-8 md:px-12 py-5 sm:py-6 md:py-7 text-base sm:text-lg md:text-xl rounded-xl w-full sm:w-auto"
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              <Phone className="mr-2 sm:mr-3 w-5 h-5 sm:w-6 sm:h-6" />
-              Angebot anfordern
-            </Button>
-          </motion.div>
 
           {/* Contact Icons */}
           <motion.div

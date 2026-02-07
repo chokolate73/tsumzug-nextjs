@@ -6,7 +6,7 @@ import moversTeam from '@/assets/movers-team.jpeg';
 import { Shield, Clock, MapPin, Heart, LucideIcon } from 'lucide-react';
 
 const stats = [
-  { value: "500+", label: "Moves Completed" },
+  { value: "1500+", label: "Moves Completed" },
   { value: "98%", label: "Customer Satisfaction" },
   { value: "24h", label: "Response Time" },
   { value: "NRW", label: "Full Coverage" }

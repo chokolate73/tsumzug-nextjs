@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       'x-default': `${BASE_URL}/hausmeisterservice`,
     },
   },
-  openGraph: { title: 'Handyman Services Duisburg | Professional from €35/hour', description: 'Professional handyman services in Duisburg.', url: `${BASE_URL}/en/services/handyman-services`, locale: 'en_GB' },
+  openGraph: { title: 'Handyman Services Duisburg | Professional from €35/hour', description: 'Professional handyman services in Duisburg.', url: `${BASE_URL}/en/services/handyman-services`, locale: 'en_GB', type: 'website', images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'TopSicher Umzüge – Moving Company in Duisburg' }] },
 };
 
 export default function HandymanServicesPage() {

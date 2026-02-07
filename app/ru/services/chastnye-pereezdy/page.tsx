@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       'x-default': `${BASE_URL}/privatumzuege`,
     },
   },
-  openGraph: { title: 'Частный переезд Дуйсбург | Без стресса от 299€', description: 'Профессиональный частный переезд в Дуйсбурге.', url: `${BASE_URL}/ru/services/chastnye-pereezdy`, locale: 'ru_RU' },
+  openGraph: { title: 'Частный переезд Дуйсбург | Без стресса от 299€', description: 'Профессиональный частный переезд в Дуйсбурге.', url: `${BASE_URL}/ru/services/chastnye-pereezdy`, locale: 'ru_RU', type: 'website', images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'TopSicher Umzüge – Транспортная компания в Дуйсбурге' }] },
 };
 
 export default function ChastnyePereeezdyPage() {

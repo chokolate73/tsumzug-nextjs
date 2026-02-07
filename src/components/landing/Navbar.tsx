@@ -68,13 +68,10 @@ export default function Navbar() {
 
   return (
     <>
-      <motion.nav
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.5 }}
+      <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled 
-            ? 'bg-white/95 backdrop-blur-md shadow-lg' 
+          isScrolled
+            ? 'bg-white/95 backdrop-blur-md shadow-lg'
             : 'bg-transparent'
         }`}
       >
@@ -186,7 +183,7 @@ export default function Navbar() {
             </button>
           </div>
         </div>
-      </motion.nav>
+      </nav>
 
       {/* Mobile Menu */}
       <AnimatePresence>
@@ -209,9 +206,12 @@ export default function Navbar() {
                 </a>
                 
                 {/* Mobile Services Links */}
-                <div className="border-l-2 border-orange-200 pl-4">
-                  <span className="text-sm font-semibold text-slate-500 uppercase tracking-wide">Leistungen</span>
-                  <div className="flex flex-col gap-2 mt-2">
+                <details className="group">
+                  <summary className="text-lg font-medium text-slate-700 hover:text-orange-500 py-2 transition-colors cursor-pointer list-none [&::-webkit-details-marker]:hidden flex items-center justify-between">
+                    Leistungen
+                    <ChevronDown className="w-4 h-4 transition-transform duration-200 group-open:rotate-180" />
+                  </summary>
+                  <div className="border-l-2 border-orange-200 pl-4 mt-2 flex flex-col gap-2">
                     {services.map((service) => (
                       <Link
                         key={service.id}
@@ -224,7 +224,7 @@ export default function Navbar() {
                       </Link>
                     ))}
                   </div>
-                </div>
+                </details>
 
                 {navLinks.slice(1).map((link) => (
                   <a
@@ -237,31 +237,18 @@ export default function Navbar() {
                   </a>
                 ))}
 
-                {/* Mobile Language Switcher */}
-                <div className="flex gap-2 py-2">
+                {/* Language links (text only, no flags) */}
+                <div className="flex gap-4 py-2">
                   {languages.map((lang) => (
-                    <Button
+                    <button
                       key={lang.code}
-                      variant={lang.path === '/' ? "default" : "outline"}
-                      size="sm"
-                      onClick={() => handleLanguageChange(lang.path)}
-                      className="flex-1"
+                      onClick={() => { handleLanguageChange(lang.path); setIsMobileMenuOpen(false); }}
+                      className={`text-sm font-medium transition-colors ${lang.path === '/' ? 'text-orange-500' : 'text-slate-500 hover:text-slate-700'}`}
                     >
-                      <span className="mr-1">{lang.flag}</span>
-                      {lang.code.toUpperCase()}
-                    </Button>
+                      {lang.label}
+                    </button>
                   ))}
                 </div>
-
-                <Button
-                  className="bg-orange-500 hover:bg-orange-600 text-white rounded-xl w-full mt-2"
-                  asChild
-                >
-                  <a href="tel:+4917665197997">
-                    <Phone className="w-4 h-4 mr-2" />
-                    Anrufen
-                  </a>
-                </Button>
               </div>
             </div>
           </motion.div>

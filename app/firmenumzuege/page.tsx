@@ -23,6 +23,8 @@ export const metadata: Metadata = {
     description: 'Firmenumzug in Duisburg ✓ Büroumzug mit IT-Transport ✓ Umzug außerhalb der Arbeitszeit ✓ Möbelmontage inklusive.',
     url: `${BASE_URL}/firmenumzuege`,
     locale: 'de_DE',
+    type: 'website',
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'TopSicher Umzüge – Umzugsfirma in Duisburg' }],
   },
 };
 
