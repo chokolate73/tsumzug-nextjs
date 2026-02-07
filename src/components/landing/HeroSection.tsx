@@ -13,22 +13,17 @@ export default function HeroSection() {
 
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-      {/* Background Image - Mobile (LCP optimized with img tag) */}
-      <img
-        src={heroBackgroundMobile}
-        alt="Umzugsfirma Duisburg – TopSicher Umzüge Team beim Privatumzug"
-        fetchPriority="high"
-        decoding="async"
-        className="absolute inset-0 w-full h-full object-cover md:hidden"
-      />
-      {/* Background Image - Desktop (LCP optimized with img tag) */}
-      <img
-        src={heroBackground}
-        alt="Umzugsunternehmen Duisburg – TopSicher Umzüge professioneller Umzugsservice"
-        fetchPriority="high"
-        decoding="async"
-        className="absolute inset-0 w-full h-full object-cover hidden md:block"
-      />
+      {/* Background Image - single <picture> so browser only downloads the needed variant */}
+      <picture className="absolute inset-0 w-full h-full">
+        <source media="(min-width: 768px)" srcSet={heroBackground} />
+        <img
+          src={heroBackgroundMobile}
+          alt="Umzugsfirma Duisburg – TopSicher Umzüge Team beim professionellen Umzugsservice"
+          fetchPriority="high"
+          decoding="async"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      </picture>
       <div className="absolute inset-0 bg-white/75" />
 
       <div className="container mx-auto px-4 sm:px-6 md:px-12 relative z-10">
@@ -53,7 +48,7 @@ export default function HeroSection() {
             className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 bg-blue-50 rounded-full mb-6 sm:mb-8 md:mb-10"
           >
             <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-blue-500" />
-            <span className="text-blue-700 font-medium text-sm sm:text-base md:text-lg">Rund um die Uhr erreichbar</span>
+            <span className="text-blue-700 font-medium text-sm sm:text-base md:text-lg">Schnelle Rückmeldung – auch kurzfristig</span>
           </motion.div>
 
           {/* Main Heading */}

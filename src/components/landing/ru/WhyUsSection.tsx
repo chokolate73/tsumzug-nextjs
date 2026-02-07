@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import moversTeam from '@/assets/movers-team.jpeg';
 import { Shield, Clock, MapPin, Heart, LucideIcon } from 'lucide-react';
 const stats = [{
-  value: "500+",
+  value: "1500+",
   label: "Переездов выполнено"
 }, {
   value: "98%",

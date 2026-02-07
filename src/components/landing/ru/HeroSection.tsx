@@ -13,24 +13,18 @@ export default function HeroSectionRu() {
 
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-      {/* Background Image - Mobile (LCP optimized) */}
-      <img
-        src={heroBackgroundMobile}
-        alt=""
-        fetchPriority="high"
-        decoding="async"
-        className="absolute inset-0 w-full h-full object-cover md:hidden"
-        aria-hidden="true"
-      />
-      {/* Background Image - Desktop (LCP optimized) */}
-      <img
-        src={heroBackground}
-        alt=""
-        fetchPriority="high"
-        decoding="async"
-        className="absolute inset-0 w-full h-full object-cover hidden md:block"
-        aria-hidden="true"
-      />
+      {/* Background Image - single <picture> so browser only downloads the needed variant */}
+      <picture className="absolute inset-0 w-full h-full">
+        <source media="(min-width: 768px)" srcSet={heroBackground} />
+        <img
+          src={heroBackgroundMobile}
+          alt=""
+          fetchPriority="high"
+          decoding="async"
+          className="absolute inset-0 w-full h-full object-cover"
+          aria-hidden="true"
+        />
+      </picture>
       <div className="absolute inset-0 bg-white/75" />
 
       <div className="container mx-auto px-4 sm:px-6 md:px-12 relative z-10">
@@ -55,7 +49,7 @@ export default function HeroSectionRu() {
             className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 bg-blue-50 rounded-full mb-6 sm:mb-8 md:mb-10"
           >
             <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-blue-500" />
-            <span className="text-blue-700 font-medium text-sm sm:text-base md:text-lg">Работаем 24/7</span>
+            <span className="text-blue-700 font-medium text-sm sm:text-base md:text-lg">Быстрый отклик – даже в короткие сроки</span>
           </motion.div>
 
           {/* Main Heading */}
