@@ -1,13 +1,14 @@
 import type { Metadata } from 'next';
 import Moebeltransport from '@/views/services/Moebeltransport';
 import { getBaseUrl } from '@/lib/seo/helpers';
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 
 const BASE_URL = getBaseUrl();
 
 export const metadata: Metadata = {
-  title: 'Möbeltransport Duisburg & NRW - Günstig & Zuverlässig',
+  title: 'Möbeltransport Duisburg & NRW | Günstig & Versichert',
   description: 'Günstiger Möbeltransport in Duisburg und NRW. Einzelstücke oder Komplettladung. Versichert ✓ Flexibel ✓ Deutschlandweit ✓ Jetzt anfragen!',
-  keywords: 'Möbeltransport, Möbelspedition, Gütertransport, Lieferservice Möbel, Transport Duisburg, Möbellieferung',
+  keywords: 'Möbeltransport Duisburg, Möbelspedition, Gütertransport, Lieferservice Möbel, Transport Duisburg, Möbellieferung NRW',
   alternates: {
     canonical: `${BASE_URL}/moebeltransport`,
     languages: {
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Möbeltransport Duisburg & NRW - Günstig & Zuverlässig',
+    title: 'Möbeltransport Duisburg & NRW | Günstig & Versichert',
     description: 'Günstiger Möbeltransport in Duisburg und NRW. Einzelstücke oder Komplettladung.',
     url: `${BASE_URL}/moebeltransport`,
     locale: 'de_DE',
@@ -26,5 +27,13 @@ export const metadata: Metadata = {
 };
 
 export default function MoebeltransportPage() {
-  return <Moebeltransport />;
+  return (
+    <>
+      <BreadcrumbSchema items={[
+        { name: 'Startseite', path: '/' },
+        { name: 'Möbeltransport', path: '/moebeltransport' },
+      ]} />
+      <Moebeltransport />
+    </>
+  );
 }

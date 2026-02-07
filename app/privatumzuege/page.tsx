@@ -1,13 +1,14 @@
 import type { Metadata } from 'next';
 import Privatumzuege from '@/views/services/Privatumzuege';
 import { getBaseUrl } from '@/lib/seo/helpers';
+import BreadcrumbSchema from '@/components/seo/BreadcrumbSchema';
 
 const BASE_URL = getBaseUrl();
 
 export const metadata: Metadata = {
-  title: 'Privatumzüge Duisburg & NRW - Stressfreier Wohnungsumzug',
-  description: 'Professionelle Privatumzüge in Duisburg und NRW. Komplettservice inkl. Verpackung, Möbelmontage & Transport. Festpreisgarantie ✓ Versichert ✓ Jetzt Angebot anfordern!',
-  keywords: 'Privatumzug, Wohnungsumzug, Umzugsfirma Duisburg, Umzug NRW, Möbeltransport, Umzugsservice',
+  title: 'Privatumzug Duisburg | Stressfrei umziehen zum Festpreis',
+  description: 'Professioneller Privatumzug in Duisburg und NRW. Komplettservice inkl. Verpackung, Möbelmontage & Transport. Festpreisgarantie ✓ Versichert ✓ Jetzt Angebot anfordern!',
+  keywords: 'Privatumzug Duisburg, Wohnungsumzug Duisburg, Umzugsfirma Duisburg, Umzug Festpreis, Umzugshelfer Duisburg, Umzugsservice NRW',
   alternates: {
     canonical: `${BASE_URL}/privatumzuege`,
     languages: {
@@ -18,13 +19,21 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Privatumzüge Duisburg & NRW - Stressfreier Wohnungsumzug',
-    description: 'Professionelle Privatumzüge in Duisburg und NRW. Komplettservice inkl. Verpackung, Möbelmontage & Transport.',
+    title: 'Privatumzug Duisburg | Stressfrei umziehen zum Festpreis',
+    description: 'Professioneller Privatumzug in Duisburg und NRW. Komplettservice inkl. Verpackung, Möbelmontage & Transport.',
     url: `${BASE_URL}/privatumzuege`,
     locale: 'de_DE',
   },
 };
 
 export default function PrivatumzuegePage() {
-  return <Privatumzuege />;
+  return (
+    <>
+      <BreadcrumbSchema items={[
+        { name: 'Startseite', path: '/' },
+        { name: 'Privatumzüge', path: '/privatumzuege' },
+      ]} />
+      <Privatumzuege />
+    </>
+  );
 }

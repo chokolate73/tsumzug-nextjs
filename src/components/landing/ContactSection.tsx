@@ -111,8 +111,8 @@ export default function ContactSection() {
           >
             <span className="text-orange-400 font-semibold tracking-wide uppercase text-xs sm:text-sm">Kontakt</span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mt-3 sm:mt-4 leading-tight">
-              Bereit für den Umzug?
-              <span className="block text-slate-400">Sprechen Sie mit uns.</span>
+              Kostenloses Umzugsangebot
+              <span className="block text-slate-400">anfordern</span>
             </h2>
 
             <p className="text-slate-400 mt-4 sm:mt-6 text-base sm:text-lg leading-relaxed">

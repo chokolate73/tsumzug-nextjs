@@ -1,13 +1,15 @@
 import type { Metadata } from 'next';
 import Index from '@/views/Index';
 import { getBaseUrl } from '@/lib/seo/helpers';
+import LocalBusinessSchema from '@/components/seo/LocalBusinessSchema';
+import FAQSchema from '@/components/seo/FAQSchema';
 
 const BASE_URL = getBaseUrl();
 
 export const metadata: Metadata = {
-  title: 'Professionelle Umzüge in Duisburg & NRW',
-  description: 'TopSicher Umzüge - Ihr zuverlässiger Partner für Umzüge in Duisburg und NRW. Privatumzüge, Firmenumzüge, Entrümpelung, Möbeltransport und mehr. Festpreisgarantie ✓ Versichert ✓',
-  keywords: 'Umzugsfirma Duisburg, Umzug NRW, Privatumzug, Firmenumzug, Möbeltransport, Entrümpelung, Hausmeisterservice',
+  title: 'Umzugsfirma Duisburg | TopSicher Umzüge – Ihr Umzugsunternehmen',
+  description: 'TopSicher Umzüge – Ihre zuverlässige Umzugsfirma in Duisburg. Privatumzug, Firmenumzug, Entrümpelung, Möbeltransport zum Festpreis. Kostenlose Besichtigung & Festpreisgarantie. Jetzt Angebot anfordern!',
+  keywords: 'Umzugsunternehmen Duisburg, Umzugsfirma Duisburg, Privatumzug Duisburg, Firmenumzug Duisburg, Büroumzug Duisburg, Umzugsservice Duisburg, Umzugskosten Duisburg, Umzug Festpreis Duisburg, Umzugsangebot Duisburg, Umzugshelfer Duisburg, Full-Service Umzug Duisburg, Seniorenumzug Duisburg, Möbelmontage Umzug, Packservice Umzug, Halteverbotszone Umzug Duisburg, Entrümpelung Duisburg, Möbeltransport Duisburg',
   alternates: {
     canonical: `${BASE_URL}/`,
     languages: {
@@ -18,13 +20,19 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Professionelle Umzüge in Duisburg & NRW',
-    description: 'TopSicher Umzüge - Ihr zuverlässiger Partner für Umzüge in Duisburg und NRW.',
+    title: 'TopSicher Umzüge – Umzugsfirma Duisburg | Festpreis & Full-Service',
+    description: 'Professionelles Umzugsunternehmen in Duisburg. Privatumzug, Büroumzug, Entrümpelung – alles aus einer Hand. Kostenlose Besichtigung & Festpreisgarantie.',
     url: `${BASE_URL}/`,
     locale: 'de_DE',
   },
 };
 
 export default function HomePage() {
-  return <Index />;
+  return (
+    <>
+      <LocalBusinessSchema />
+      <FAQSchema />
+      <Index />
+    </>
+  );
 }

@@ -16,20 +16,18 @@ export default function HeroSection() {
       {/* Background Image - Mobile (LCP optimized with img tag) */}
       <img
         src={heroBackgroundMobile}
-        alt=""
+        alt="Umzugsfirma Duisburg – TopSicher Umzüge Team beim Privatumzug"
         fetchPriority="high"
         decoding="async"
         className="absolute inset-0 w-full h-full object-cover md:hidden"
-        aria-hidden="true"
       />
       {/* Background Image - Desktop (LCP optimized with img tag) */}
       <img
         src={heroBackground}
-        alt=""
+        alt="Umzugsunternehmen Duisburg – TopSicher Umzüge professioneller Umzugsservice"
         fetchPriority="high"
         decoding="async"
         className="absolute inset-0 w-full h-full object-cover hidden md:block"
-        aria-hidden="true"
       />
       <div className="absolute inset-0 bg-white/75" />
 
@@ -65,7 +63,7 @@ export default function HeroSection() {
             transition={{ delay: 0.2, duration: 0.8 }}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-slate-900 leading-tight mb-4 sm:mb-6 md:mb-8"
           >
-            Stressfreier Umzug in Duisburg & NRW
+            Umzugsunternehmen Duisburg – <span className="text-orange-500">TopSicher Umzüge</span>
           </motion.h1>
 
           {/* Description */}
@@ -75,7 +73,7 @@ export default function HeroSection() {
             transition={{ delay: 0.3 }}
             className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-slate-700 mb-6 sm:mb-8 md:mb-10 leading-relaxed font-medium"
           >
-            Schnelle und zuverlässige Umzugsservices in ganz Nordrhein-Westfalen.
+            Ihre <strong>Umzugsfirma in Duisburg</strong> – zuverlässig, versichert und zum Festpreis. Privatumzug, Firmenumzug und Full-Service in ganz NRW.
           </motion.p>
 
           {/* CTA Button */}

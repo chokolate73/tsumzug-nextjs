@@ -146,7 +146,13 @@ const ServiceCard = ({
         </ul>
 
         {/* Learn More Link */}
-        
+        <Link
+          href={`/${service.slug}`}
+          className="inline-flex items-center gap-2 text-orange-500 font-semibold text-sm hover:text-orange-600 transition-colors"
+        >
+          Mehr erfahren
+          <ArrowRight className="w-4 h-4" />
+        </Link>
       </div>
     </motion.div>;
 };
@@ -184,11 +190,11 @@ export default function ServicesSection() {
       }} className="max-w-2xl mb-10 sm:mb-12 md:mb-16">
           <span className="text-orange-500 font-semibold tracking-wide uppercase text-xs sm:text-sm">Unsere Leistungen</span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mt-3 sm:mt-4 leading-tight">
-            Umzug & Renovierung
-            <span className="text-slate-400"> aus einer Hand</span>
+            Unsere Umzugsservices
+            <span className="text-slate-400"> in Duisburg</span>
           </h2>
           <p className="text-slate-600 mt-4 sm:mt-6 text-base sm:text-lg">
-            Komplettservice von Umzug bis Renovierung und Hausmeisterservice. Alles an einem Ort – sparen Sie Zeit und Geld.
+            Kompletter <strong>Umzugsservice in Duisburg</strong> und NRW – von Privatumzug über Firmenumzug bis Entrümpelung und Renovierung. Alles aus einer Hand zum Festpreis.
           </p>
         </motion.div>
 

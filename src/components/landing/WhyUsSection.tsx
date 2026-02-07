@@ -58,7 +58,7 @@ export default function WhyUsSection() {
             <div className="relative">
               <img
                 src={moversTeam}
-                alt="Professionelles Umzugsteam"
+                alt="TopSicher Umzüge Team – Umzugshelfer Duisburg beim Möbeltransport"
                 className="rounded-3xl w-full object-cover shadow-lg"
               />
               
@@ -98,10 +98,10 @@ export default function WhyUsSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <span className="text-orange-500 font-semibold tracking-wide uppercase text-xs sm:text-sm">Warum wir</span>
+            <span className="text-orange-500 font-semibold tracking-wide uppercase text-xs sm:text-sm">Warum TopSicher Umzüge</span>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mt-3 sm:mt-4 leading-tight">
-              Ihr zuverlässiger
-              <span className="block text-orange-500">Umzugspartner</span>
+              Ihre zuverlässige
+              <span className="block text-orange-500">Umzugsfirma in Duisburg</span>
             </h2>
 
             <p className="text-slate-600 mt-4 sm:mt-6 text-base sm:text-lg leading-relaxed">
