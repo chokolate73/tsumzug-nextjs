@@ -2,13 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { HelpCircle } from 'lucide-react';
+import { HelpCircle, ChevronDown } from 'lucide-react';
 
 interface FAQItem {
   question: string;
@@ -88,34 +82,27 @@ export default function FAQSectionEn() {
           </p>
         </motion.div>
 
-        {/* FAQ Accordion */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-3xl mx-auto"
-        >
-          <Accordion type="single" collapsible className="space-y-4">
-            {faqItems.map((item, index) => (
-              <AccordionItem
-                key={index}
-                value={`item-${index}`}
-                className="bg-white rounded-2xl px-6 border-none shadow-sm hover:shadow-md transition-shadow"
-              >
-                <AccordionTrigger className="text-left font-semibold text-slate-900 hover:text-orange-500 py-6 hover:no-underline">
-                  <span className="flex items-center gap-3">
-                    <HelpCircle className="w-5 h-5 text-orange-500 flex-shrink-0" />
-                    {item.question}
-                  </span>
-                </AccordionTrigger>
-                <AccordionContent className="text-slate-600 pb-6 pl-8">
-                  {item.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </motion.div>
+        {/* FAQ – native <details> so answers are always in the DOM for crawlers */}
+        <div className="max-w-3xl mx-auto space-y-4">
+          {faqItems.map((item, index) => (
+            <details
+              key={index}
+              className="bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow group"
+              name="faq"
+            >
+              <summary className="flex items-center justify-between cursor-pointer px-6 py-6 font-semibold text-slate-900 hover:text-orange-500 list-none [&::-webkit-details-marker]:hidden">
+                <span className="flex items-center gap-3">
+                  <HelpCircle className="w-5 h-5 text-orange-500 flex-shrink-0" />
+                  {item.question}
+                </span>
+                <ChevronDown className="w-4 h-4 shrink-0 transition-transform duration-200 group-open:rotate-180" />
+              </summary>
+              <div className="text-slate-600 pb-6 px-6 pl-14">
+                {item.answer}
+              </div>
+            </details>
+          ))}
+        </div>
 
         {/* CTA */}
         <motion.div

@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Button } from "@/components/ui/button";
 import { Phone, Clock, CheckCircle, MessageCircle, Mail } from 'lucide-react';
 import heroBackground from '@/assets/hero-background.jpg';
 import heroBackgroundMobile from '@/assets/hero-background-mobile.png';
@@ -70,23 +69,6 @@ export default function HeroSection() {
           >
             Ihre <strong>Umzugsfirma in Duisburg</strong> – zuverlässig, versichert und zum Festpreis. Privatumzug, Firmenumzug und Full-Service in ganz NRW.
           </motion.p>
-
-          {/* CTA Button */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="mb-6 sm:mb-8 md:mb-10"
-          >
-            <Button
-              size="lg"
-              className="bg-orange-500 hover:bg-orange-600 text-white px-6 sm:px-8 md:px-12 py-5 sm:py-6 md:py-7 text-base sm:text-lg md:text-xl rounded-xl w-full sm:w-auto"
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              <Phone className="mr-2 sm:mr-3 w-5 h-5 sm:w-6 sm:h-6" />
-              Angebot anfordern
-            </Button>
-          </motion.div>
 
           {/* Contact Icons */}
           <motion.div
