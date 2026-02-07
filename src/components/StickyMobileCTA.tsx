@@ -1,10 +1,10 @@
 'use client';
 
 import React from 'react';
-import { Phone, MessageCircle, FileText } from 'lucide-react';
+import { Phone, MessageCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { COMPANY } from '@/config/company';
-import { trackCallClick, trackWhatsAppClick, trackAngebotClick } from '@/utils/tracking';
+import { trackCallClick, trackWhatsAppClick } from '@/utils/tracking';
 
 interface CTAButtonProps {
   href: string;
@@ -63,10 +63,6 @@ export default function StickyMobileCTA() {
     trackWhatsAppClick('sticky_mobile_cta');
   };
 
-  const handleAngebotClick = () => {
-    trackAngebotClick('sticky_mobile_cta');
-  };
-
   return (
     <>
       {/* Sticky bottom bar - mobile only */}
@@ -94,13 +90,6 @@ export default function StickyMobileCTA() {
             label="WhatsApp"
             onClick={handleWhatsAppClick}
             variant="secondary"
-          />
-          <CTAButton
-            href="#contact"
-            icon={<FileText className="w-5 h-5" />}
-            label="Angebot"
-            onClick={handleAngebotClick}
-            variant="accent"
           />
         </div>
       </motion.div>
