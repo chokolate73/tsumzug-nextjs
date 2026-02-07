@@ -227,31 +227,18 @@ export default function NavbarEn() {
                   </a>
                 ))}
 
-                {/* Mobile Language Switcher */}
-                <div className="flex gap-2 py-2">
+                {/* Language links (text only, no flags) */}
+                <div className="flex gap-4 py-2">
                   {languages.map((lang) => (
-                    <Button
+                    <button
                       key={lang.code}
-                      variant={lang.path === '/en' ? "default" : "outline"}
-                      size="sm"
-                      onClick={() => handleLanguageChange(lang.path)}
-                      className="flex-1"
+                      onClick={() => { handleLanguageChange(lang.path); setIsMobileMenuOpen(false); }}
+                      className={`text-sm font-medium transition-colors ${lang.path === '/en' ? 'text-orange-500' : 'text-slate-500 hover:text-slate-700'}`}
                     >
-                      <span className="mr-1">{lang.flag}</span>
-                      {lang.code.toUpperCase()}
-                    </Button>
+                      {lang.label}
+                    </button>
                   ))}
                 </div>
-
-                <Button
-                  className="bg-orange-500 hover:bg-orange-600 text-white rounded-xl w-full mt-2"
-                  asChild
-                >
-                  <a href="tel:+4917665197997">
-                    <Phone className="w-4 h-4 mr-2" />
-                    Call Now
-                  </a>
-                </Button>
               </div>
             </div>
           </motion.div>
