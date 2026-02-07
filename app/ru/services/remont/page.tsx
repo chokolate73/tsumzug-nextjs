@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       'x-default': `${BASE_URL}/renovierung`,
     },
   },
-  openGraph: { title: 'Ремонт квартир Дуйсбург | Покраска от 12€/м²', description: 'Профессиональный ремонт в Дуйсбурге.', url: `${BASE_URL}/ru/services/remont`, locale: 'ru_RU' },
+  openGraph: { title: 'Ремонт квартир Дуйсбург | Покраска от 12€/м²', description: 'Профессиональный ремонт в Дуйсбурге.', url: `${BASE_URL}/ru/services/remont`, locale: 'ru_RU', type: 'website', images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'TopSicher Umzüge – Транспортная компания в Дуйсбурге' }] },
 };
 
 export default function RemontPage() {

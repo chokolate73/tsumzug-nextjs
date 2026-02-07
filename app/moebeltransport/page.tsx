@@ -23,6 +23,8 @@ export const metadata: Metadata = {
     description: 'Möbeltransport in Duisburg ✓ Sofa, Schrank, Waschmaschine ✓ Klaviertransport ✓ IKEA Abholung ✓ Versichert.',
     url: `${BASE_URL}/moebeltransport`,
     locale: 'de_DE',
+    type: 'website',
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'TopSicher Umzüge – Umzugsfirma in Duisburg' }],
   },
 };
 

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       'x-default': `${BASE_URL}/entruempelung`,
     },
   },
-  openGraph: { title: 'Clearance & Disposal Duisburg | Fast & Fair from €199', description: 'Professional clearance in Duisburg.', url: `${BASE_URL}/en/services/clearance-disposal`, locale: 'en_GB' },
+  openGraph: { title: 'Clearance & Disposal Duisburg | Fast & Fair from €199', description: 'Professional clearance in Duisburg.', url: `${BASE_URL}/en/services/clearance-disposal`, locale: 'en_GB', type: 'website', images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'TopSicher Umzüge – Moving Company in Duisburg' }] },
 };
 
 export default function ClearanceDisposalPage() {

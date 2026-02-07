@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       'x-default': `${BASE_URL}/firmenumzuege`,
     },
   },
-  openGraph: { title: 'Office Relocation Duisburg | Business Moving with Minimal Downtime', description: 'Professional office relocation in Duisburg.', url: `${BASE_URL}/en/services/office-relocations`, locale: 'en_GB' },
+  openGraph: { title: 'Office Relocation Duisburg | Business Moving with Minimal Downtime', description: 'Professional office relocation in Duisburg.', url: `${BASE_URL}/en/services/office-relocations`, locale: 'en_GB', type: 'website', images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'TopSicher Umzüge – Moving Company in Duisburg' }] },
 };
 
 export default function OfficeRelocationsPage() {

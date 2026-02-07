@@ -22,6 +22,8 @@ export const metadata: Metadata = {
     description: 'TopSicher Umzüge - Ваш надёжный партнёр по переездам в Дуйсбурге и NRW.',
     url: `${BASE_URL}/ru`,
     locale: 'ru_RU',
+    type: 'website',
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'TopSicher Umzüge – Транспортная компания в Дуйсбурге' }],
   },
 };
 

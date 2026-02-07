@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       'x-default': `${BASE_URL}/firmenumzuege`,
     },
   },
-  openGraph: { title: 'Офисный переезд Дуйсбург | Минимальный простой', description: 'Профессиональный офисный переезд в Дуйсбурге.', url: `${BASE_URL}/ru/services/ofisnye-pereezdy`, locale: 'ru_RU' },
+  openGraph: { title: 'Офисный переезд Дуйсбург | Минимальный простой', description: 'Профессиональный офисный переезд в Дуйсбурге.', url: `${BASE_URL}/ru/services/ofisnye-pereezdy`, locale: 'ru_RU', type: 'website', images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'TopSicher Umzüge – Транспортная компания в Дуйсбурге' }] },
 };
 
 export default function OfisnyePereeezdyPage() {

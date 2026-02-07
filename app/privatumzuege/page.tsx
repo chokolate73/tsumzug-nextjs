@@ -23,6 +23,8 @@ export const metadata: Metadata = {
     description: 'Privatumzug in Duisburg zum Festpreis ✓ Full-Service Umzug ✓ Möbelmontage ✓ Packservice ✓ Versicherter Transport.',
     url: `${BASE_URL}/privatumzuege`,
     locale: 'de_DE',
+    type: 'website',
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'TopSicher Umzüge – Umzugsfirma in Duisburg' }],
   },
 };
 

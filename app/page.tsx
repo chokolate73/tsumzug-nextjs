@@ -24,6 +24,8 @@ export const metadata: Metadata = {
     description: 'Professionelles Umzugsunternehmen in Duisburg. Privatumzug, Büroumzug, Entrümpelung – alles aus einer Hand. Kostenlose Besichtigung & Festpreisgarantie.',
     url: `${BASE_URL}/`,
     locale: 'de_DE',
+    type: 'website',
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'TopSicher Umzüge – Umzugsfirma in Duisburg' }],
   },
 };
 

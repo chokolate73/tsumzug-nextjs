@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       'x-default': `${BASE_URL}/entruempelung`,
     },
   },
-  openGraph: { title: 'Уборка и вывоз мусора Дуйсбург | Быстро и честно от 199€', description: 'Профессиональная уборка и вывоз в Дуйсбурге.', url: `${BASE_URL}/ru/services/uborka-vyvoz`, locale: 'ru_RU' },
+  openGraph: { title: 'Уборка и вывоз мусора Дуйсбург | Быстро и честно от 199€', description: 'Профессиональная уборка и вывоз в Дуйсбурге.', url: `${BASE_URL}/ru/services/uborka-vyvoz`, locale: 'ru_RU', type: 'website', images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'TopSicher Umzüge – Транспортная компания в Дуйсбурге' }] },
 };
 
 export default function UborkaVyvozPage() {

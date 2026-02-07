@@ -23,6 +23,8 @@ export const metadata: Metadata = {
     description: 'Hausmeisterservice in Duisburg ✓ IKEA Möbelmontage ✓ Küchenmontage ✓ Kleinreparaturen ✓ Zuverlässig & schnell.',
     url: `${BASE_URL}/hausmeisterservice`,
     locale: 'de_DE',
+    type: 'website',
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'TopSicher Umzüge – Umzugsfirma in Duisburg' }],
   },
 };
 

@@ -22,6 +22,8 @@ export const metadata: Metadata = {
     description: 'TopSicher Umzüge - Your reliable partner for moving in Duisburg and NRW.',
     url: `${BASE_URL}/en`,
     locale: 'en_GB',
+    type: 'website',
+    images: [{ url: `${BASE_URL}/og-image.png`, width: 1200, height: 630, alt: 'TopSicher Umzüge – Moving Company in Duisburg' }],
   },
 };
 
