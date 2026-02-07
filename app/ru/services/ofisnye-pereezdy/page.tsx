@@ -10,10 +10,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${BASE_URL}/ru/services/ofisnye-pereezdy`,
     languages: {
-      'de': `${BASE_URL}/firmenumzug-duisburg`,
+      'de': `${BASE_URL}/firmenumzuege`,
       'en': `${BASE_URL}/en/services/office-relocations`,
       'ru': `${BASE_URL}/ru/services/ofisnye-pereezdy`,
-      'x-default': `${BASE_URL}/firmenumzug-duisburg`,
+      'x-default': `${BASE_URL}/firmenumzuege`,
     },
   },
   openGraph: { title: 'Офисный переезд Дуйсбург | Минимальный простой', description: 'Профессиональный офисный переезд в Дуйсбурге.', url: `${BASE_URL}/ru/services/ofisnye-pereezdy`, locale: 'ru_RU' },

@@ -14,14 +14,14 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { services } from '@/data/services';
 
-// Map old service IDs to new Duisburg URLs (German only)
-const duisburgServiceUrls: Record<string, string> = {
-  'privatumzuege': '/privatumzug-duisburg',
-  'firmenumzuege': '/firmenumzug-duisburg',
-  'entruempelung': '/entruempelung-duisburg',
-  'moebeltransport': '/moebeltransport-duisburg',
-  'hausmeisterservice': '/umzugsunternehmen-duisburg',
-  'renovierung': '/umzugsunternehmen-duisburg',
+// Map service IDs to German service page URLs
+const serviceUrls: Record<string, string> = {
+  'privatumzuege': '/privatumzuege',
+  'firmenumzuege': '/firmenumzuege',
+  'entruempelung': '/entruempelung',
+  'moebeltransport': '/moebeltransport',
+  'hausmeisterservice': '/hausmeisterservice',
+  'renovierung': '/renovierung',
 };
 
 const navLinks = [
@@ -117,7 +117,7 @@ export default function Navbar() {
                   {services.map((service) => (
                     <DropdownMenuItem key={service.id} asChild>
                       <Link
-                        href={duisburgServiceUrls[service.id] || `/services/${service.slug.de}`}
+                        href={serviceUrls[service.id] || `/services/${service.slug.de}`}
                         className="cursor-pointer flex items-center gap-2"
                       >
                         <service.icon className="w-4 h-4 text-orange-500" />
@@ -215,7 +215,7 @@ export default function Navbar() {
                     {services.map((service) => (
                       <Link
                         key={service.id}
-                        href={duisburgServiceUrls[service.id] || `/services/${service.slug.de}`}
+                        href={serviceUrls[service.id] || `/services/${service.slug.de}`}
                         onClick={() => setIsMobileMenuOpen(false)}
                         className="text-base font-medium text-slate-700 hover:text-orange-500 py-1 transition-colors flex items-center gap-2"
                       >

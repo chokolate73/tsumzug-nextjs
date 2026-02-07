@@ -10,10 +10,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${BASE_URL}/en/services/office-relocations`,
     languages: {
-      'de': `${BASE_URL}/firmenumzug-duisburg`,
+      'de': `${BASE_URL}/firmenumzuege`,
       'en': `${BASE_URL}/en/services/office-relocations`,
       'ru': `${BASE_URL}/ru/services/ofisnye-pereezdy`,
-      'x-default': `${BASE_URL}/firmenumzug-duisburg`,
+      'x-default': `${BASE_URL}/firmenumzuege`,
     },
   },
   openGraph: { title: 'Office Relocation Duisburg | Business Moving with Minimal Downtime', description: 'Professional office relocation in Duisburg.', url: `${BASE_URL}/en/services/office-relocations`, locale: 'en_GB' },

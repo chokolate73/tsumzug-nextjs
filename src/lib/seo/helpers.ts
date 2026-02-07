@@ -1,10 +1,7 @@
 /**
  * SEO Helpers
- * Shared utilities for base URL resolution and slug generation
+ * Shared utilities for base URL resolution
  */
-
-import { LOCATIONS, type Location } from './locations';
-import { SERVICES, type ServiceDef } from './services';
 
 /**
  * Returns the canonical base URL.
@@ -17,58 +14,24 @@ export function getBaseUrl(): string {
   );
 }
 
-/** Build a city+service slug, e.g. "umzug-duesseldorf" */
-export function buildCityServiceSlug(
-  service: ServiceDef,
-  location: Location,
-): string {
-  return `${service.slug}-${location.slug}`;
-}
-
-/** Return every valid { serviceSlug, citySlug, service, location } combination */
-export function getAllServiceCityPairs() {
-  const pairs: {
-    slug: string;
-    service: ServiceDef;
-    location: Location;
-  }[] = [];
-
-  for (const service of SERVICES) {
-    for (const location of LOCATIONS) {
-      pairs.push({
-        slug: buildCityServiceSlug(service, location),
-        service,
-        location,
-      });
-    }
-  }
-  return pairs;
-}
-
 /**
  * All static routes for the sitemap.
  * Must be kept in sync with app/ directory.
  */
 export function getStaticRoutes(): string[] {
   return [
+    // DE
     '/',
-    '/angebot',
     '/impressum',
     '/datenschutz',
-    '/preise-duisburg',
-    '/privatumzug-duisburg',
-    '/firmenumzug-duisburg',
-    '/entruempelung-duisburg',
-    '/moebeltransport-duisburg',
-    '/hausmeisterservice-duisburg',
-    '/renovierung-duisburg',
-    '/umzugsunternehmen-duisburg',
-    '/umzug-kosten-duisburg',
-    '/umzug-und-entruempelung-duisburg',
-    '/haushaltsaufloesung-duisburg',
+    '/privatumzuege',
+    '/firmenumzuege',
+    '/entruempelung',
+    '/moebeltransport',
+    '/hausmeisterservice',
+    '/renovierung',
     // EN
     '/en',
-    '/en/prices',
     '/en/services/residential-moves',
     '/en/services/office-relocations',
     '/en/services/clearance-disposal',
@@ -77,7 +40,6 @@ export function getStaticRoutes(): string[] {
     '/en/services/renovation',
     // RU
     '/ru',
-    '/ru/prices',
     '/ru/services/chastnye-pereezdy',
     '/ru/services/ofisnye-pereezdy',
     '/ru/services/uborka-vyvoz',

@@ -10,10 +10,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${BASE_URL}/en/services/handyman-services`,
     languages: {
-      'de': `${BASE_URL}/umzugsunternehmen-duisburg`,
+      'de': `${BASE_URL}/hausmeisterservice`,
       'en': `${BASE_URL}/en/services/handyman-services`,
       'ru': `${BASE_URL}/ru/services/uslugi-masterov`,
-      'x-default': `${BASE_URL}/umzugsunternehmen-duisburg`,
+      'x-default': `${BASE_URL}/hausmeisterservice`,
     },
   },
   openGraph: { title: 'Handyman Services Duisburg | Professional from €35/hour', description: 'Professional handyman services in Duisburg.', url: `${BASE_URL}/en/services/handyman-services`, locale: 'en_GB' },

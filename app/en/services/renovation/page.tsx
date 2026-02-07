@@ -10,10 +10,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${BASE_URL}/en/services/renovation`,
     languages: {
-      'de': `${BASE_URL}/renovierung-duisburg`,
+      'de': `${BASE_URL}/renovierung`,
       'en': `${BASE_URL}/en/services/renovation`,
       'ru': `${BASE_URL}/ru/services/remont`,
-      'x-default': `${BASE_URL}/renovierung-duisburg`,
+      'x-default': `${BASE_URL}/renovierung`,
     },
   },
   openGraph: { title: 'Renovation Duisburg | Painting from €12/m²', description: 'Professional renovation in Duisburg.', url: `${BASE_URL}/en/services/renovation`, locale: 'en_GB' },

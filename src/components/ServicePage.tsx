@@ -169,7 +169,7 @@ export default function ServicePage({ service, lang }: ServicePageProps) {
 
   const getServicePath = (s: ServiceData) => {
     if (lang === 'de') {
-      return `/services/${s.slug.de}`;
+      return `/${s.slug.de}`;
     }
     return `/${lang}/services/${s.slug[lang]}`;
   };
@@ -177,7 +177,7 @@ export default function ServicePage({ service, lang }: ServicePageProps) {
   const handleLanguageChange = (targetLang: Lang) => {
     const targetPath =
       targetLang === 'de'
-        ? `/services/${service.slug.de}`
+        ? `/${service.slug.de}`
         : `/${targetLang}/services/${service.slug[targetLang]}`;
     router.push(targetPath);
   };
@@ -230,11 +230,11 @@ export default function ServicePage({ service, lang }: ServicePageProps) {
   const otherServices = services.filter((s) => s.id !== service.id);
 
   const canonicalPath =
-    lang === 'de' ? `/services/${service.slug.de}` : `/${lang}/services/${service.slug[lang]}`;
+    lang === 'de' ? `/${service.slug.de}` : `/${lang}/services/${service.slug[lang]}`;
 
   // Generate correct alternate URLs for each language (with translated slugs)
   const alternates = {
-    de: `/services/${service.slug.de}`,
+    de: `/${service.slug.de}`,
     en: `/en/services/${service.slug.en}`,
     ru: `/ru/services/${service.slug.ru}`,
   };

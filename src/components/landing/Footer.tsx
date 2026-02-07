@@ -91,18 +91,21 @@ export default function Footer() {
             <h4 className="text-base sm:text-lg font-semibold mb-4 sm:mb-6">Unsere Leistungen</h4>
             <ul className="space-y-2 sm:space-y-3">
               {[
-                'Privatumzüge',
-                'Firmenumzüge',
-                'Entrümpelung',
-                'Möbeltransport',
-                'Hausmeisterservice',
-                'Renovierung'
+                { label: 'Privatumzüge', href: '/privatumzuege' },
+                { label: 'Firmenumzüge', href: '/firmenumzuege' },
+                { label: 'Entrümpelung', href: '/entruempelung' },
+                { label: 'Möbeltransport', href: '/moebeltransport' },
+                { label: 'Hausmeisterservice', href: '/hausmeisterservice' },
+                { label: 'Renovierung', href: '/renovierung' },
               ].map((service) => (
-                <li key={service}>
-                  <span className="text-slate-400 inline-flex items-center gap-2 text-sm sm:text-base">
+                <li key={service.label}>
+                  <Link
+                    href={service.href}
+                    className="text-slate-400 hover:text-orange-400 transition-colors inline-flex items-center gap-2 text-sm sm:text-base"
+                  >
                     <span className="w-1 h-1 bg-orange-500 rounded-full" />
-                    {service}
-                  </span>
+                    {service.label}
+                  </Link>
                 </li>
               ))}
             </ul>

@@ -10,10 +10,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${BASE_URL}/ru/services/perevozka-mebeli`,
     languages: {
-      'de': `${BASE_URL}/moebeltransport-duisburg`,
+      'de': `${BASE_URL}/moebeltransport`,
       'en': `${BASE_URL}/en/services/furniture-transport`,
       'ru': `${BASE_URL}/ru/services/perevozka-mebeli`,
-      'x-default': `${BASE_URL}/moebeltransport-duisburg`,
+      'x-default': `${BASE_URL}/moebeltransport`,
     },
   },
   openGraph: { title: 'Перевозка мебели Дуйсбург | Гибко и застраховано от 119€', description: 'Доступная перевозка мебели в Дуйсбурге.', url: `${BASE_URL}/ru/services/perevozka-mebeli`, locale: 'ru_RU' },
