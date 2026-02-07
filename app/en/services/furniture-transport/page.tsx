@@ -10,10 +10,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${BASE_URL}/en/services/furniture-transport`,
     languages: {
-      'de': `${BASE_URL}/moebeltransport-duisburg`,
+      'de': `${BASE_URL}/moebeltransport`,
       'en': `${BASE_URL}/en/services/furniture-transport`,
       'ru': `${BASE_URL}/ru/services/perevozka-mebeli`,
-      'x-default': `${BASE_URL}/moebeltransport-duisburg`,
+      'x-default': `${BASE_URL}/moebeltransport`,
     },
   },
   openGraph: { title: 'Furniture Transport Duisburg | Flexible & Insured from €119', description: 'Affordable furniture transport in Duisburg.', url: `${BASE_URL}/en/services/furniture-transport`, locale: 'en_GB' },

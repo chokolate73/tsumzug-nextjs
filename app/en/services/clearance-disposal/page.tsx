@@ -10,10 +10,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${BASE_URL}/en/services/clearance-disposal`,
     languages: {
-      'de': `${BASE_URL}/entruempelung-duisburg`,
+      'de': `${BASE_URL}/entruempelung`,
       'en': `${BASE_URL}/en/services/clearance-disposal`,
       'ru': `${BASE_URL}/ru/services/uborka-vyvoz`,
-      'x-default': `${BASE_URL}/entruempelung-duisburg`,
+      'x-default': `${BASE_URL}/entruempelung`,
     },
   },
   openGraph: { title: 'Clearance & Disposal Duisburg | Fast & Fair from €199', description: 'Professional clearance in Duisburg.', url: `${BASE_URL}/en/services/clearance-disposal`, locale: 'en_GB' },

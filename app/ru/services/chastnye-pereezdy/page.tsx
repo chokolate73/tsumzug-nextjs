@@ -10,10 +10,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${BASE_URL}/ru/services/chastnye-pereezdy`,
     languages: {
-      'de': `${BASE_URL}/privatumzug-duisburg`,
+      'de': `${BASE_URL}/privatumzuege`,
       'en': `${BASE_URL}/en/services/residential-moves`,
       'ru': `${BASE_URL}/ru/services/chastnye-pereezdy`,
-      'x-default': `${BASE_URL}/privatumzug-duisburg`,
+      'x-default': `${BASE_URL}/privatumzuege`,
     },
   },
   openGraph: { title: 'Частный переезд Дуйсбург | Без стресса от 299€', description: 'Профессиональный частный переезд в Дуйсбурге.', url: `${BASE_URL}/ru/services/chastnye-pereezdy`, locale: 'ru_RU' },

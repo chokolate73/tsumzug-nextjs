@@ -91,18 +91,21 @@ export default function FooterEn() {
             <h4 className="text-base sm:text-lg font-semibold mb-4 sm:mb-6">Our Services</h4>
             <ul className="space-y-2 sm:space-y-3">
               {[
-                'Residential Moves',
-                'Office Relocations',
-                'Clearance & Disposal',
-                'Transport Services',
-                'Handyman Services',
-                'Renovation'
+                { label: 'Residential Moves', href: '/en/services/residential-moves' },
+                { label: 'Office Relocations', href: '/en/services/office-relocations' },
+                { label: 'Clearance & Disposal', href: '/en/services/clearance-disposal' },
+                { label: 'Furniture Transport', href: '/en/services/furniture-transport' },
+                { label: 'Handyman Services', href: '/en/services/handyman-services' },
+                { label: 'Renovation', href: '/en/services/renovation' },
               ].map((service) => (
-                <li key={service}>
-                  <span className="text-slate-400 inline-flex items-center gap-2 text-sm sm:text-base">
+                <li key={service.label}>
+                  <Link
+                    href={service.href}
+                    className="text-slate-400 hover:text-orange-400 transition-colors inline-flex items-center gap-2 text-sm sm:text-base"
+                  >
                     <span className="w-1 h-1 bg-orange-500 rounded-full" />
-                    {service}
-                  </span>
+                    {service.label}
+                  </Link>
                 </li>
               ))}
             </ul>

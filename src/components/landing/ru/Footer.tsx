@@ -91,18 +91,21 @@ export default function FooterRu() {
             <h4 className="text-base sm:text-lg font-semibold mb-4 sm:mb-6">Наши услуги</h4>
             <ul className="space-y-2 sm:space-y-3">
               {[
-                'Квартирные переезды',
-                'Офисные переезды',
-                'Вывоз и утилизация',
-                'Грузоперевозки',
-                'Мастер на час',
-                'Ремонт и отделка'
+                { label: 'Квартирные переезды', href: '/ru/services/chastnye-pereezdy' },
+                { label: 'Офисные переезды', href: '/ru/services/ofisnye-pereezdy' },
+                { label: 'Вывоз и утилизация', href: '/ru/services/uborka-vyvoz' },
+                { label: 'Грузоперевозки', href: '/ru/services/perevozka-mebeli' },
+                { label: 'Мастер на час', href: '/ru/services/uslugi-masterov' },
+                { label: 'Ремонт и отделка', href: '/ru/services/remont' },
               ].map((service) => (
-                <li key={service}>
-                  <span className="text-slate-400 inline-flex items-center gap-2 text-sm sm:text-base">
+                <li key={service.label}>
+                  <Link
+                    href={service.href}
+                    className="text-slate-400 hover:text-orange-400 transition-colors inline-flex items-center gap-2 text-sm sm:text-base"
+                  >
                     <span className="w-1 h-1 bg-orange-500 rounded-full" />
-                    {service}
-                  </span>
+                    {service.label}
+                  </Link>
                 </li>
               ))}
             </ul>

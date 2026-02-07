@@ -10,10 +10,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${BASE_URL}/ru/services/remont`,
     languages: {
-      'de': `${BASE_URL}/renovierung-duisburg`,
+      'de': `${BASE_URL}/renovierung`,
       'en': `${BASE_URL}/en/services/renovation`,
       'ru': `${BASE_URL}/ru/services/remont`,
-      'x-default': `${BASE_URL}/renovierung-duisburg`,
+      'x-default': `${BASE_URL}/renovierung`,
     },
   },
   openGraph: { title: 'Ремонт квартир Дуйсбург | Покраска от 12€/м²', description: 'Профессиональный ремонт в Дуйсбурге.', url: `${BASE_URL}/ru/services/remont`, locale: 'ru_RU' },
