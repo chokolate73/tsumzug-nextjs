@@ -3,8 +3,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import Image from 'next/image';
-import serviceTransport from '@/assets/service-transport.jpg';
+import Image, { StaticImageData } from 'next/image';
+import serviceTransport from '@/assets/service-transport.webp';
 import {
   Home,
   Trash2,
@@ -27,7 +27,7 @@ interface Service {
   title: string;
   subtitle: string;
   description: string;
-  image: string;
+  image: string | StaticImageData;
   features: string[];
   slug: string;
 }

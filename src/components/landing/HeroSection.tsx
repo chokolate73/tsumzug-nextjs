@@ -2,9 +2,10 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { Phone, Clock, CheckCircle, MessageCircle, Mail } from 'lucide-react';
-import heroBackground from '@/assets/hero-background.jpg';
-import heroBackgroundMobile from '@/assets/hero-background-mobile.png';
+import heroBackground from '@/assets/hero-background.webp';
+import heroBackgroundMobile from '@/assets/hero-background-mobile.webp';
 
 export default function HeroSection() {
   const whatsappLink = "https://wa.me/4917665197997?text=Hallo%2C%20ich%20brauche%20Hilfe%20beim%20Umzug";
@@ -12,17 +13,29 @@ export default function HeroSection() {
 
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-      {/* Background Image - single <picture> so browser only downloads the needed variant */}
-      <picture className="absolute inset-0 w-full h-full">
-        <source media="(min-width: 768px)" srcSet={heroBackground} />
-        <img
+      {/* Background Image – desktop (landscape) & mobile (portrait) art direction */}
+      <div className="absolute inset-0 hidden md:block">
+        <Image
+          src={heroBackground}
+          alt="Umzugsfirma Duisburg – TopSicher Umzüge Team beim professionellen Umzugsservice"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+          placeholder="blur"
+        />
+      </div>
+      <div className="absolute inset-0 md:hidden">
+        <Image
           src={heroBackgroundMobile}
           alt="Umzugsfirma Duisburg – TopSicher Umzüge Team beim professionellen Umzugsservice"
-          fetchPriority="high"
-          decoding="async"
-          className="absolute inset-0 w-full h-full object-cover"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+          placeholder="blur"
         />
-      </picture>
+      </div>
       <div className="absolute inset-0 bg-white/75" />
 
       <div className="container mx-auto px-4 sm:px-6 md:px-12 relative z-10">

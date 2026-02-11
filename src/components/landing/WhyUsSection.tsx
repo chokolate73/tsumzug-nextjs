@@ -2,7 +2,8 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import moversTeam from '@/assets/movers-team.jpeg';
+import Image from 'next/image';
+import moversTeam from '@/assets/movers-team.webp';
 import { Shield, Clock, MapPin, Heart, LucideIcon } from 'lucide-react';
 
 const stats = [
@@ -56,10 +57,12 @@ export default function WhyUsSection() {
           >
             {/* Main Image */}
             <div className="relative">
-              <img
+              <Image
                 src={moversTeam}
                 alt="TopSicher Umzüge Team – Umzugshelfer Duisburg beim Möbeltransport"
                 className="rounded-3xl w-full object-cover shadow-lg"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                placeholder="blur"
               />
               
 
