@@ -1,18 +1,20 @@
 'use client';
 import React from 'react';
+import dynamic from 'next/dynamic';
 import Navbar from '@/components/landing/Navbar';
 import HeroSection from '@/components/landing/HeroSection';
 import ServicesSection from '@/components/landing/ServicesSection';
 import WhyUsSection from '@/components/landing/WhyUsSection';
-import ServiceAreasSection from '@/components/landing/ServiceAreasSection';
-import GallerySection from '@/components/landing/GallerySection';
-import TestimonialsSection from '@/components/landing/TestimonialsSection';
-import FAQSection from '@/components/landing/FAQSection';
-import ContactSection from '@/components/landing/ContactSection';
-import Footer from '@/components/landing/Footer';
 import StickyMobileCTA from '@/components/StickyMobileCTA';
 import CookieConsent from '@/components/CookieConsent';
 import SEO from '@/components/SEO';
+
+const ServiceAreasSection = dynamic(() => import('@/components/landing/ServiceAreasSection'));
+const GallerySection = dynamic(() => import('@/components/landing/GallerySection'));
+const TestimonialsSection = dynamic(() => import('@/components/landing/TestimonialsSection'));
+const FAQSection = dynamic(() => import('@/components/landing/FAQSection'));
+const ContactSection = dynamic(() => import('@/components/landing/ContactSection'));
+const Footer = dynamic(() => import('@/components/landing/Footer'));
 
 export default function Index() {
   return (
