@@ -1,13 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  webpack(config) {
-    // Handle image imports as URL strings (matching Vite behavior)
-    config.module.rules.push({
-      test: /\.(png|jpe?g|gif|svg|webp)$/i,
-      type: 'asset/resource',
-    });
-    return config;
-  },
   async headers() {
     return [
       {
@@ -85,7 +77,6 @@ const nextConfig = {
   },
   trailingSlash: false,
   images: {
-    disableStaticImages: true,
     remotePatterns: [
       {
         protocol: 'https',

@@ -2,15 +2,16 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image, { StaticImageData } from 'next/image';
 import { X, ZoomIn, ChevronLeft, ChevronRight } from 'lucide-react';
-import galleryMoverBoxes from '@/assets/gallery-mover-boxes.png';
-import galleryTruckWorker from '@/assets/gallery-truck-worker.jpg';
-import galleryCleaningWorker from '@/assets/gallery-cleaning-worker.png';
-import galleryDeliveryVan from '@/assets/gallery-delivery-van.png';
-import galleryMoversFurniture from '@/assets/gallery-movers-furniture.jpg';
+import galleryMoverBoxes from '@/assets/gallery-mover-boxes.webp';
+import galleryTruckWorker from '@/assets/gallery-truck-worker.webp';
+import galleryCleaningWorker from '@/assets/gallery-cleaning-worker.webp';
+import galleryDeliveryVan from '@/assets/gallery-delivery-van.webp';
+import galleryMoversFurniture from '@/assets/gallery-movers-furniture.webp';
 
 interface GalleryImage {
-  src: string;
+  src: StaticImageData;
   alt: string;
   category: string;
 }
@@ -95,25 +96,24 @@ export default function GallerySectionRu() {
           <AnimatePresence mode="popLayout">
             {galleryImages.map((image, index) => (
               <motion.div
-                key={image.src}
+                key={image.src.src}
                 layout
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.4 }}
                 className={`relative group cursor-pointer overflow-hidden rounded-2xl ${
-                  index === 0 || index === 5 ? 'md:col-span-2 md:row-span-2' : ''
+                  index === 0 || index === 5 ? 'md:col-span-2 md:row-span-2 h-64 md:h-96' : 'h-48 md:h-64'
                 }`}
                 onClick={() => openLightbox(index)}
               >
-                <img
+                <Image
                   src={image.src}
                   alt={image.alt}
-                  loading="lazy"
-                  decoding="async"
-                  className={`w-full object-cover group-hover:scale-110 transition-transform duration-500 ${
-                    index === 0 || index === 5 ? 'h-64 md:h-full' : 'h-48 md:h-64'
-                  }`}
+                  fill
+                  sizes={index === 0 || index === 5 ? "(max-width: 768px) 100vw, 50vw" : "(max-width: 768px) 50vw, 25vw"}
+                  placeholder="blur"
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
 
                 {/* Overlay */}
@@ -176,7 +176,7 @@ export default function GallerySectionRu() {
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
-              src={galleryImages[selectedImage].src}
+              src={galleryImages[selectedImage].src.src}
               alt={galleryImages[selectedImage].alt}
               className="max-w-full max-h-[85vh] object-contain rounded-lg"
               onClick={(e) => e.stopPropagation()}
