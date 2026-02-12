@@ -136,18 +136,68 @@ export default function PrivatumzuegePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="max-w-3xl"
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
               Umzugskosten Duisburg – Transparent & zum Festpreis
             </h2>
-            <p className="text-slate-600 leading-relaxed mb-4">
-              Wir glauben an faire und transparente Preise. Deshalb erhalten Sie von uns immer ein verbindliches Festpreisangebot – ohne versteckte Kosten oder böse Überraschungen am Umzugstag. Ihren <strong>Umzug zum Festpreis in Duisburg</strong> kalkulieren wir auf Basis einer kostenlosen Besichtigung, bei der wir das Umzugsvolumen, die Entfernung und den Aufwand genau einschätzen.
-            </p>
-            <p className="text-slate-600 leading-relaxed mb-4">
-              Die Umzugskosten in Duisburg richten sich nach der Wohnungsgröße, der Etage, dem Zugang und den gewünschten Zusatzleistungen. Ein Privatumzug für eine 2-Zimmer-Wohnung beginnt ab 300 Euro. Fordern Sie jetzt Ihr individuelles Umzugsangebot an – kostenlos und unverbindlich.
+            <p className="text-slate-600 mb-10 max-w-2xl">
+              Verbindliche Festpreise ohne versteckte Kosten. Ihren <strong>Umzug zum Festpreis in Duisburg</strong> kalkulieren wir auf Basis einer kostenlosen Besichtigung.
             </p>
           </motion.div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="bg-slate-50 rounded-2xl p-6 text-center border border-slate-100"
+            >
+              <h3 className="text-lg font-bold text-slate-900 mb-2">1-Zimmer-Wohnung</h3>
+              <div className="text-3xl font-bold text-orange-500 mb-1">ab 299 &euro;</div>
+              <p className="text-sm text-slate-500">Festpreis</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="bg-slate-50 rounded-2xl p-6 text-center border border-slate-100"
+            >
+              <h3 className="text-lg font-bold text-slate-900 mb-2">2-Zimmer-Wohnung</h3>
+              <div className="text-3xl font-bold text-orange-500 mb-1">ab 449 &euro;</div>
+              <p className="text-sm text-slate-500">Festpreis</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-slate-50 rounded-2xl p-6 text-center border border-slate-100"
+            >
+              <h3 className="text-lg font-bold text-slate-900 mb-2">3-Zimmer-Wohnung</h3>
+              <div className="text-3xl font-bold text-orange-500 mb-1">ab 649 &euro;</div>
+              <p className="text-sm text-slate-500">Festpreis</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="bg-slate-50 rounded-2xl p-6 text-center border border-slate-100"
+            >
+              <h3 className="text-lg font-bold text-slate-900 mb-2">4-Zimmer-Wohnung</h3>
+              <div className="text-3xl font-bold text-orange-500 mb-1">ab 849 &euro;</div>
+              <p className="text-sm text-slate-500">Festpreis</p>
+            </motion.div>
+          </div>
+
+          <p className="text-sm text-slate-500 mt-6">
+            * Alle Preise sind Richtwerte. Der endgültige Preis wird nach kostenloser Besichtigung individuell kalkuliert.
+          </p>
         </div>
       </section>
 

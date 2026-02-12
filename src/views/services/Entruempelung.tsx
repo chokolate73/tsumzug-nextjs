@@ -148,8 +148,93 @@ export default function EntruempelungPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Pricing Section */}
       <section className="py-16 bg-slate-50">
+        <div className="container mx-auto px-6 md:px-12">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
+              Unsere Preise für Entrümpelung
+            </h2>
+            <p className="text-slate-600 mb-10 max-w-2xl">
+              Faire Festpreise für jede Entrümpelung – transparent und ohne versteckte Kosten.
+            </p>
+          </motion.div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="bg-white rounded-2xl p-6 text-center border border-slate-100"
+            >
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Keller / Dachboden</h3>
+              <div className="text-3xl font-bold text-orange-500 mb-1">ab 199 &euro;</div>
+              <p className="text-sm text-slate-500">Festpreis</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="bg-white rounded-2xl p-6 text-center border border-slate-100"
+            >
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Garage</h3>
+              <div className="text-3xl font-bold text-orange-500 mb-1">ab 399 &euro;</div>
+              <p className="text-sm text-slate-500">Festpreis</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-white rounded-2xl p-6 text-center border border-slate-100"
+            >
+              <h3 className="text-lg font-bold text-slate-900 mb-2">2-Zimmer-Wohnung</h3>
+              <div className="text-3xl font-bold text-orange-500 mb-1">ab 699 &euro;</div>
+              <p className="text-sm text-slate-500">Festpreis</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="bg-white rounded-2xl p-6 text-center border border-slate-100"
+            >
+              <h3 className="text-lg font-bold text-slate-900 mb-2">3-Zimmer-Wohnung</h3>
+              <div className="text-3xl font-bold text-orange-500 mb-1">ab 999 &euro;</div>
+              <p className="text-sm text-slate-500">Festpreis</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="bg-white rounded-2xl p-6 text-center border border-slate-100"
+            >
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Messie-Wohnung</h3>
+              <div className="text-3xl font-bold text-orange-500 mb-1">auf Anfrage</div>
+              <p className="text-sm text-slate-500">Individuelle Kalkulation</p>
+            </motion.div>
+          </div>
+
+          <p className="text-sm text-slate-500 mt-6">
+            * Alle Preise sind Richtwerte. Der endgültige Preis wird nach kostenloser Besichtigung individuell kalkuliert.
+          </p>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-6 md:px-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

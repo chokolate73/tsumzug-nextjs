@@ -207,8 +207,81 @@ export default function FirmenumzuegePage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Pricing Section */}
       <section className="py-16 bg-slate-50">
+        <div className="container mx-auto px-6 md:px-12">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
+              Unsere Preise für Firmenumzüge
+            </h2>
+            <p className="text-slate-600 mb-10 max-w-2xl">
+              Transparente Festpreise für Ihren Büroumzug – verbindlich kalkuliert nach kostenloser Besichtigung.
+            </p>
+          </motion.div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="bg-white rounded-2xl p-6 text-center border border-slate-100"
+            >
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Kleines Büro</h3>
+              <div className="text-3xl font-bold text-orange-500 mb-1">ab 499 &euro;</div>
+              <p className="text-sm text-slate-500">bis 5 Arbeitsplätze</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="bg-white rounded-2xl p-6 text-center border border-slate-100"
+            >
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Mittleres Büro</h3>
+              <div className="text-3xl font-bold text-orange-500 mb-1">ab 1.200 &euro;</div>
+              <p className="text-sm text-slate-500">5–15 Arbeitsplätze</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-white rounded-2xl p-6 text-center border border-slate-100"
+            >
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Großes Büro</h3>
+              <div className="text-3xl font-bold text-orange-500 mb-1">ab 2.500 &euro;</div>
+              <p className="text-sm text-slate-500">ab 15 Arbeitsplätze</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="bg-white rounded-2xl p-6 text-center border border-slate-100"
+            >
+              <h3 className="text-lg font-bold text-slate-900 mb-2">IT-Umzug</h3>
+              <div className="text-3xl font-bold text-orange-500 mb-1">auf Anfrage</div>
+              <p className="text-sm text-slate-500">Individuelle Kalkulation</p>
+            </motion.div>
+          </div>
+
+          <p className="text-sm text-slate-500 mt-6">
+            * Alle Preise sind Richtwerte. Der endgültige Preis wird nach kostenloser Besichtigung individuell kalkuliert.
+          </p>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-6 md:px-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

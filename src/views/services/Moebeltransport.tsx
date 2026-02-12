@@ -199,6 +199,79 @@ export default function MoebeltransportPage() {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <section className="py-16 bg-slate-50">
+        <div className="container mx-auto px-6 md:px-12">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
+              Unsere Preise für Möbeltransport
+            </h2>
+            <p className="text-slate-600 mb-10 max-w-2xl">
+              Transparente Festpreise für jeden Transportauftrag – ohne versteckte Kosten.
+            </p>
+          </motion.div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="bg-white rounded-2xl p-6 text-center border border-slate-100"
+            >
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Einzelmöbel</h3>
+              <div className="text-3xl font-bold text-orange-500 mb-1">ab 119 &euro;</div>
+              <p className="text-sm text-slate-500">Sofa, Schrank, Waschmaschine</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="bg-white rounded-2xl p-6 text-center border border-slate-100"
+            >
+              <h3 className="text-lg font-bold text-slate-900 mb-2">IKEA Abholung</h3>
+              <div className="text-3xl font-bold text-orange-500 mb-1">ab 139 &euro;</div>
+              <p className="text-sm text-slate-500">Abholung & Lieferung</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-white rounded-2xl p-6 text-center border border-slate-100"
+            >
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Teilumzug</h3>
+              <div className="text-3xl font-bold text-orange-500 mb-1">ab 249 &euro;</div>
+              <p className="text-sm text-slate-500">Mehrere Möbelstücke</p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="bg-white rounded-2xl p-6 text-center border border-slate-100"
+            >
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Klaviertransport</h3>
+              <div className="text-3xl font-bold text-orange-500 mb-1">auf Anfrage</div>
+              <p className="text-sm text-slate-500">Individuelle Kalkulation</p>
+            </motion.div>
+          </div>
+
+          <p className="text-sm text-slate-500 mt-6">
+            * Alle Preise sind Richtwerte. Der endgültige Preis wird nach Absprache individuell kalkuliert.
+          </p>
+        </div>
+      </section>
+
       {/* Section 4: CTA */}
       <section className="py-16 bg-slate-50">
         <div className="container mx-auto px-6 md:px-12">
