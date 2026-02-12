@@ -1,18 +1,20 @@
 'use client';
 import React from 'react';
+import dynamic from 'next/dynamic';
 import Navbar from '@/components/landing/ru/Navbar';
 import HeroSection from '@/components/landing/ru/HeroSection';
 import ServicesSection from '@/components/landing/ru/ServicesSection';
 import WhyUsSection from '@/components/landing/ru/WhyUsSection';
-import ServiceAreasSection from '@/components/landing/ru/ServiceAreasSection';
-import GallerySection from '@/components/landing/ru/GallerySection';
-import TestimonialsSection from '@/components/landing/ru/TestimonialsSection';
-import FAQSection from '@/components/landing/ru/FAQSection';
-import ContactSection from '@/components/landing/ru/ContactSection';
-import Footer from '@/components/landing/ru/Footer';
 import StickyMobileCTA from '@/components/StickyMobileCTA';
 import CookieConsent from '@/components/CookieConsent';
 import SEO from '@/components/SEO';
+
+const ServiceAreasSection = dynamic(() => import('@/components/landing/ru/ServiceAreasSection'));
+const GallerySection = dynamic(() => import('@/components/landing/ru/GallerySection'));
+const TestimonialsSection = dynamic(() => import('@/components/landing/ru/TestimonialsSection'));
+const FAQSection = dynamic(() => import('@/components/landing/ru/FAQSection'));
+const ContactSection = dynamic(() => import('@/components/landing/ru/ContactSection'));
+const Footer = dynamic(() => import('@/components/landing/ru/Footer'));
 
 export default function HomeRu() {
   return (
