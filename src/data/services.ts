@@ -153,8 +153,8 @@ Our moving helpers are trained, experienced, and handle your property with care.
       en: 'residential moving, apartment moving, moving company Duisburg, moving NRW, furniture transport, moving service',
       ru: 'частный переезд, переезд квартиры, транспортная компания Дуйсбург, переезд NRW, перевозка мебели, услуги переезда',
     },
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
-    heroImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80',
+    image: '/service-privatumzuege.webp',
+    heroImage: '/service-privatumzuege.webp',
   },
   {
     id: 'firmenumzuege',
@@ -242,8 +242,8 @@ We offer flexible moving times outside regular business hours so your company is
       en: 'office relocation, business moving, commercial moving, IT relocation, corporate moving company, office moving NRW',
       ru: 'офисный переезд, переезд бизнеса, коммерческий переезд, IT-переезд, корпоративный переезд, офисный переезд NRW',
     },
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80',
-    heroImage: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80',
+    image: '/service-firmenumzuege.webp',
+    heroImage: '/service-firmenumzuege.webp',
   },
   {
     id: 'entruempelung',
@@ -331,8 +331,8 @@ Our household clearance service is perfect for estate settlements, landlords, pr
       en: 'clearance, household clearance, junk removal, basement cleanout, apartment clearance Duisburg',
       ru: 'уборка, расчистка дома, вывоз мусора, уборка подвала, расчистка квартиры Дуйсбург',
     },
-    image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80',
-    heroImage: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1200&q=80',
+    image: '/service-entruempelung.webp',
+    heroImage: '/service-entruempelung.webp',
   },
   {
     id: 'moebeltransport',
@@ -509,8 +509,8 @@ We're also your contact for minor repairs in Dinslaken, Bottrop, Ratingen, and t
       en: 'handyman service, furniture assembly, IKEA assembly, handyman Duisburg, kitchen installation, appliance hookup',
       ru: 'услуги мастера, сборка мебели, сборка IKEA, мастер Дуйсбург, установка кухни, подключение техники',
     },
-    image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=80',
-    heroImage: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&q=80',
+    image: '/service-hausmeisterservice.webp',
+    heroImage: '/service-hausmeisterservice.webp',
   },
   {
     id: 'renovierung',
@@ -598,8 +598,8 @@ Our team works cleanly, quickly, and reliably in Dinslaken, Bottrop, Ratingen, a
       en: 'renovation, painting, wallpapering, laminate flooring, apartment renovation Duisburg, painting service',
       ru: 'ремонт, малярные работы, обои, ламинат, ремонт квартиры Дуйсбург, покраска',
     },
-    image: 'https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=600&q=80',
-    heroImage: 'https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=1200&q=80',
+    image: '/service-renovierung.webp',
+    heroImage: '/service-renovierung.webp',
   },
 ];
 
