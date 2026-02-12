@@ -48,7 +48,7 @@ const mainServices: Service[] = [{
   icon: Truck,
   title: "Möbeltransport",
   subtitle: "Transportservice",
-  description: "Möbel-, Geräte- und Gütertransport in NRW und ganz Deutschland. Von Einzelstücken bis zur Komplettladung.",
+  description: "Möbel-, Geräte- und Gütertransport in NRW. Von Einzelstücken bis zur Komplettladung.",
   image: serviceTransport,
   features: ["Flexible Terminplanung", "Verschiedene Fahrzeuggrößen", "Versicherter Transport"],
   slug: "moebeltransport"

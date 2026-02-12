@@ -70,7 +70,7 @@ const mainServices: Service[] = [
     icon: Truck,
     title: "Грузоперевозки",
     subtitle: "Möbeltransport",
-    description: "Перевозка мебели, техники и любых грузов по NRW и всей Германии. От одного предмета до полной загрузки.",
+    description: "Перевозка мебели, техники и любых грузов по NRW. От одного предмета до полной загрузки.",
     image: serviceTransport,
     features: ["Гибкий график", "Разные размеры авто", "Застрахованный груз"],
     slug: "perevozka-mebeli"

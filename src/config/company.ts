@@ -71,11 +71,11 @@ export const COMPANY = {
     },
   ],
 
-  // Social (add when available)
+  // Social
   social: {
     facebook: '',
     instagram: '',
-    google: '', // Google Business Profile URL
+    google: 'https://share.google/8XTr3rRfXkoG5OkKK', // Google Business Profile
   },
 
   // Services offered (verified from user context)

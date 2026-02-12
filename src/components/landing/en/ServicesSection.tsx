@@ -70,7 +70,7 @@ const mainServices: Service[] = [
     icon: Truck,
     title: "Transport Services",
     subtitle: "Freight & Delivery",
-    description: "Furniture, appliance, and cargo transport across NRW and all of Germany. From single items to full loads.",
+    description: "Furniture, appliance, and cargo transport across NRW. From single items to full loads.",
     image: serviceTransport,
     features: ["Flexible scheduling", "Various vehicle sizes", "Insured transport"],
     slug: "furniture-transport"

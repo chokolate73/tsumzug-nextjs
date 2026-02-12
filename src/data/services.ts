@@ -127,7 +127,7 @@ Our moving helpers are trained, experienced, and handle your property with care.
         'Flexible scheduling – weekends available',
         'Experienced and reliable team',
         'Fixed price guarantee with no hidden costs',
-        'Moving within NRW and throughout Germany',
+        'Moving within NRW',
       ],
       ru: [
         'Бесплатный осмотр и расчёт стоимости',
@@ -135,7 +135,7 @@ Our moving helpers are trained, experienced, and handle your property with care.
         'Гибкий график – работаем по выходным',
         'Опытная и надёжная команда',
         'Гарантия фиксированной цены без скрытых платежей',
-        'Переезды по NRW и всей Германии',
+        'Переезды по NRW',
       ],
     },
     metaTitle: {
@@ -353,31 +353,31 @@ Our household clearance service is perfect for estate settlements, landlords, pr
       ru: 'Транспортные услуги',
     },
     description: {
-      de: 'Möbel-, Geräte- und Gütertransport in NRW und ganz Deutschland. Von Einzelstücken bis zur Komplettladung.',
-      en: 'Furniture, appliance, and freight transport in NRW and throughout Germany. From single items to full loads.',
-      ru: 'Перевозка мебели, техники и грузов по NRW и всей Германии. От отдельных предметов до полной загрузки.',
+      de: 'Möbel-, Geräte- und Gütertransport in NRW. Von Einzelstücken bis zur Komplettladung.',
+      en: 'Furniture, appliance, and freight transport in NRW. From single items to full loads.',
+      ru: 'Перевозка мебели, техники и грузов по NRW. От отдельных предметов до полной загрузки.',
     },
     longDescription: {
       de: `Sie suchen einen günstigen Möbeltransport in Duisburg? Unsere Möbelspedition bietet flexible Lösungen für den Transport von Möbeln, Elektrogeräten und anderen Gütern in Duisburg, Oberhausen, Mülheim an der Ruhr und ganz NRW. Ob Sie ein einzelnes Möbelstück von IKEA abholen lassen möchten oder eine komplette Ladung transportieren müssen – wir haben das passende Fahrzeug und die Erfahrung.
 
 Wir verfügen über verschiedene Fahrzeuggrößen, vom Kleintransporter bis zum großen Möbelwagen. Alle unsere Fahrzeuge sind mit Decken, Gurten und weiterem Sicherungsmaterial ausgestattet, um Ihre Waren während des Transports optimal zu schützen. Möbellieferung Essen, Düsseldorf, Krefeld – wir liefern zuverlässig und pünktlich.
 
-Unser Transportservice ist flexibel, zuverlässig und versichert. Wir liefern in ganz Deutschland. Möbeltransport Moers, Dinslaken, Bottrop oder Ratingen – auf Wunsch übernehmen wir auch die Montage von Möbeln am Zielort. Jetzt Angebot für Ihren Gütertransport NRW anfordern!`,
+Unser Transportservice ist flexibel, zuverlässig und versichert. Möbeltransport Moers, Dinslaken, Bottrop oder Ratingen – auf Wunsch übernehmen wir auch die Montage von Möbeln am Zielort. Jetzt Angebot für Ihren Gütertransport NRW anfordern!`,
       en: `Looking for affordable furniture transport in Duisburg? Our furniture delivery service offers flexible solutions for transporting furniture, appliances, and other goods in Duisburg, Oberhausen, Mülheim an der Ruhr, and throughout NRW. Whether you need to pick up a single piece of furniture from IKEA or transport a full load – we have the right vehicle and experience.
 
 We have various vehicle sizes, from small vans to large moving trucks. All our vehicles are equipped with blankets, straps, and other securing materials to optimally protect your goods during transport. Furniture delivery in Essen, Düsseldorf, Krefeld – we deliver reliably and on time.
 
-Our transport service is flexible, reliable, and insured. We deliver throughout Germany. Furniture transport in Moers, Dinslaken, Bottrop, or Ratingen – upon request, we also handle furniture assembly at the destination. Request a quote for your freight transport in NRW today!`,
+Our transport service is flexible, reliable, and insured. Furniture transport in Moers, Dinslaken, Bottrop, or Ratingen – upon request, we also handle furniture assembly at the destination. Request a quote for your freight transport in NRW today!`,
       ru: `Ищете недорогую перевозку мебели в Дуйсбурге? Наша служба доставки мебели предлагает гибкие решения для перевозки мебели, техники и других товаров в Дуйсбурге, Оберхаузене, Мюльхайм-ан-дер-Рур и по всему NRW. Нужно ли вам забрать один предмет мебели из IKEA или перевезти полную загрузку – у нас есть подходящий транспорт и опыт.
 
 У нас есть различные размеры транспорта, от небольших фургонов до больших грузовиков для переезда. Все наши автомобили оснащены одеялами, ремнями и другими материалами для крепления, чтобы оптимально защитить ваши товары во время транспортировки. Доставка мебели в Эссен, Дюссельдорф, Крефельд – мы доставляем надёжно и вовремя.
 
-Наша транспортная служба гибкая, надёжная и застрахованная. Мы доставляем по всей Германии. Перевозка мебели в Моерс, Динслакен, Ботроп или Ратинген – по запросу мы также занимаемся сборкой мебели на месте назначения. Запросите предложение на грузоперевозки в NRW сегодня!`,
+Наша транспортная служба гибкая, надёжная и застрахованная. Перевозка мебели в Моерс, Динслакен, Ботроп или Ратинген – по запросу мы также занимаемся сборкой мебели на месте назначения. Запросите предложение на грузоперевозки в NRW сегодня!`,
     },
     features: {
-      de: ['Flexible Terminplanung', 'Verschiedene Fahrzeuggrößen', 'Versicherter Transport', 'Deutschlandweite Lieferung'],
-      en: ['Flexible scheduling', 'Various vehicle sizes', 'Insured transport', 'Germany-wide delivery'],
-      ru: ['Гибкий график', 'Различные размеры транспорта', 'Застрахованная перевозка', 'Доставка по Германии'],
+      de: ['Flexible Terminplanung', 'Verschiedene Fahrzeuggrößen', 'Versicherter Transport', 'NRW-weite Lieferung'],
+      en: ['Flexible scheduling', 'Various vehicle sizes', 'Insured transport', 'NRW-wide delivery'],
+      ru: ['Гибкий график', 'Различные размеры транспорта', 'Застрахованная перевозка', 'Доставка по NRW'],
     },
     benefits: {
       de: [
