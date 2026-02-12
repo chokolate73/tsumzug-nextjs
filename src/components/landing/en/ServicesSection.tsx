@@ -4,7 +4,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image, { StaticImageData } from 'next/image';
-import serviceTransport from '@/assets/service-transport.webp';
 import {
   Home,
   Trash2,
@@ -44,7 +43,7 @@ const mainServices: Service[] = [
     title: "Residential Moves",
     subtitle: "Apartment & House",
     description: "Complete moving service for apartments and houses. From packing to unpacking – we take care of every detail of your move.",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
+    image: "/service-privatumzuege.webp",
     features: ["Full packing service", "Furniture assembly/disassembly", "Secure transport", "Unpacking assistance"],
     slug: "residential-moves"
   },
@@ -53,7 +52,7 @@ const mainServices: Service[] = [
     title: "Office Relocations",
     subtitle: "Business Moves",
     description: "Professional office and company relocations with minimal downtime. We also work on weekends and evenings.",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80",
+    image: "/service-firmenumzuege.webp",
     features: ["After-hours moving", "IT equipment transport", "Office furniture assembly", "Labeling & inventory"],
     slug: "office-relocations"
   },
@@ -62,7 +61,7 @@ const mainServices: Service[] = [
     title: "Clearance & Disposal",
     subtitle: "Junk Removal",
     description: "Disposal of old furniture, appliances, and bulky waste. Complete household clearances, basement and attic cleanouts.",
-    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80",
+    image: "/service-entruempelung.webp",
     features: ["Same-day pickup", "Apartment clearance", "Post-renovation disposal", "Eco-friendly recycling"],
     slug: "clearance-disposal"
   },
@@ -70,8 +69,8 @@ const mainServices: Service[] = [
     icon: Truck,
     title: "Transport Services",
     subtitle: "Freight & Delivery",
-    description: "Furniture, appliance, and cargo transport across NRW and all of Germany. From single items to full loads.",
-    image: serviceTransport,
+    description: "Furniture, appliance, and cargo transport across NRW. From single items to full loads.",
+    image: "/service-moebeltransport.webp",
     features: ["Flexible scheduling", "Various vehicle sizes", "Insured transport"],
     slug: "furniture-transport"
   },
@@ -80,7 +79,7 @@ const mainServices: Service[] = [
     title: "Handyman Services",
     subtitle: "Home Maintenance",
     description: "IKEA furniture assembly, hanging shelves and lights, minor repairs, appliance installation – everything you need after moving.",
-    image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=80",
+    image: "/service-hausmeisterservice.webp",
     features: ["All furniture assembly", "Kitchen installation", "Curtain rod mounting", "Appliance hookup"],
     slug: "handyman-services"
   },
@@ -89,7 +88,7 @@ const mainServices: Service[] = [
     title: "Renovation",
     subtitle: "Painting & Repairs",
     description: "Painting, wallpapering, laminate flooring. We prepare your apartment for handover or move-in.",
-    image: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=600&q=80",
+    image: "/service-renovierung.webp",
     features: ["Wall painting", "Wallpapering", "Floor installation", "Final cleaning"],
     slug: "renovation"
   }

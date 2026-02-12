@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image, { StaticImageData } from 'next/image';
-import serviceTransport from '@/assets/service-transport.webp';
+
 import { Home, Trash2, Truck, Building2, Wrench, PaintBucket, Piano, Package, Warehouse, Sparkles, Plug, Hammer, LucideIcon, ArrowRight } from 'lucide-react';
 interface Service {
   icon: LucideIcon;
@@ -25,7 +25,7 @@ const mainServices: Service[] = [{
   title: "Privatumzüge",
   subtitle: "Wohnungsumzüge",
   description: "Kompletter Umzugsservice für Wohnungen und Häuser. Von der Verpackung bis zum Auspacken – wir kümmern uns um jedes Detail Ihres Umzugs.",
-  image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
+  image: "/service-privatumzuege.webp",
   features: ["Kompletter Packservice", "Möbel Ab-/Aufbau", "Sicherer Transport", "Auspackservice"],
   slug: "privatumzuege"
 }, {
@@ -33,7 +33,7 @@ const mainServices: Service[] = [{
   title: "Firmenumzüge",
   subtitle: "Büroumzüge",
   description: "Professioneller Umzug für Büros und Unternehmen mit minimaler Ausfallzeit. Wir arbeiten auch am Wochenende und abends.",
-  image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80",
+  image: "/service-firmenumzuege.webp",
   features: ["Umzug außerhalb der Arbeitszeit", "IT-Equipment Transport", "Büromöbel Montage", "Beschriftung & Inventar"],
   slug: "firmenumzuege"
 }, {
@@ -41,15 +41,15 @@ const mainServices: Service[] = [{
   title: "Entrümpelung",
   subtitle: "Haushaltsauflösung",
   description: "Entsorgung von Altmöbeln, Elektrogeräten und Sperrmüll. Komplette Haushaltsauflösungen, Keller- und Dachbodenräumungen.",
-  image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80",
+  image: "/service-entruempelung.webp",
   features: ["Abholung am selben Tag", "Wohnungsauflösung", "Entsorgung nach Renovierung", "Umweltgerechte Entsorgung"],
   slug: "entruempelung"
 }, {
   icon: Truck,
   title: "Möbeltransport",
   subtitle: "Transportservice",
-  description: "Möbel-, Geräte- und Gütertransport in NRW und ganz Deutschland. Von Einzelstücken bis zur Komplettladung.",
-  image: serviceTransport,
+  description: "Möbel-, Geräte- und Gütertransport in NRW. Von Einzelstücken bis zur Komplettladung.",
+  image: "/service-moebeltransport.webp",
   features: ["Flexible Terminplanung", "Verschiedene Fahrzeuggrößen", "Versicherter Transport"],
   slug: "moebeltransport"
 }, {
@@ -57,7 +57,7 @@ const mainServices: Service[] = [{
   title: "Hausmeisterservice",
   subtitle: "Handwerkerservice",
   description: "IKEA-Möbelmontage, Regale und Lampen aufhängen, Kleinreparaturen, Geräteanschluss – alles was Sie nach dem Umzug brauchen.",
-  image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=80",
+  image: "/service-hausmeisterservice.webp",
   features: ["Möbelmontage aller Art", "Küchenmontage", "Gardinenstangen aufhängen", "Geräteanschluss"],
   slug: "hausmeisterservice"
 }, {
@@ -65,7 +65,7 @@ const mainServices: Service[] = [{
   title: "Renovierung",
   subtitle: "Malerarbeiten",
   description: "Malerarbeiten, Tapezieren, Laminat verlegen. Wir bereiten Ihre Wohnung für die Übergabe oder den Einzug vor.",
-  image: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=600&q=80",
+  image: "/service-renovierung.webp",
   features: ["Wände streichen", "Tapezieren", "Bodenverlegung", "Endreinigung"],
   slug: "renovierung"
 }];

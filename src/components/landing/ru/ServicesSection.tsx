@@ -4,7 +4,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image, { StaticImageData } from 'next/image';
-import serviceTransport from '@/assets/service-transport.webp';
 import {
   Home,
   Trash2,
@@ -44,7 +43,7 @@ const mainServices: Service[] = [
     title: "Квартирные переезды",
     subtitle: "Privatumzüge",
     description: "Полный комплекс услуг по переезду квартир и домов. От упаковки до распаковки — мы позаботимся о каждой детали вашего переезда.",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
+    image: "/service-privatumzuege.webp",
     features: ["Полная упаковка", "Разборка/сборка мебели", "Безопасная перевозка", "Помощь с распаковкой"],
     slug: "chastnye-pereezdy"
   },
@@ -53,7 +52,7 @@ const mainServices: Service[] = [
     title: "Офисные переезды",
     subtitle: "Firmenumzüge",
     description: "Профессиональный переезд офисов и компаний с минимальным простоем. Работаем в выходные и вечернее время.",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80",
+    image: "/service-firmenumzuege.webp",
     features: ["Переезд в нерабочее время", "Перевозка оргтехники", "Сборка офисной мебели", "Маркировка и учёт"],
     slug: "ofisnye-pereezdy"
   },
@@ -62,7 +61,7 @@ const mainServices: Service[] = [
     title: "Вывоз и утилизация",
     subtitle: "Entrümpelung",
     description: "Вывоз старой мебели, техники и хлама. Полная ликвидация домохозяйств, освобождение подвалов и чердаков.",
-    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80",
+    image: "/service-entruempelung.webp",
     features: ["Вывоз в тот же день", "Ликвидация квартир", "Вывоз после ремонта", "Экологичная утилизация"],
     slug: "uborka-vyvoz"
   },
@@ -70,8 +69,8 @@ const mainServices: Service[] = [
     icon: Truck,
     title: "Грузоперевозки",
     subtitle: "Möbeltransport",
-    description: "Перевозка мебели, техники и любых грузов по NRW и всей Германии. От одного предмета до полной загрузки.",
-    image: serviceTransport,
+    description: "Перевозка мебели, техники и любых грузов по NRW. От одного предмета до полной загрузки.",
+    image: "/service-moebeltransport.webp",
     features: ["Гибкий график", "Разные размеры авто", "Застрахованный груз"],
     slug: "perevozka-mebeli"
   },
@@ -80,7 +79,7 @@ const mainServices: Service[] = [
     title: "Мастер на час",
     subtitle: "Hausmeisterservice",
     description: "Сборка мебели IKEA, навеска полок и светильников, мелкий ремонт, подключение техники — всё что нужно после переезда.",
-    image: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=80",
+    image: "/service-hausmeisterservice.webp",
     features: ["Сборка любой мебели", "Монтаж кухонь", "Навеска карнизов", "Подключение техники"],
     slug: "uslugi-masterov"
   },
@@ -89,7 +88,7 @@ const mainServices: Service[] = [
     title: "Ремонт и отделка",
     subtitle: "Renovierung",
     description: "Малярные работы, поклейка обоев, укладка ламината. Подготовим квартиру к сдаче или к заезду.",
-    image: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=600&q=80",
+    image: "/service-renovierung.webp",
     features: ["Покраска стен", "Поклейка обоев", "Укладка полов", "Уборка после ремонта"],
     slug: "remont"
   }
