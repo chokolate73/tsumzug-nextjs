@@ -4,7 +4,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image, { StaticImageData } from 'next/image';
-import serviceTransport from '@/assets/service-transport.webp';
 import {
   Home,
   Trash2,
@@ -71,7 +70,7 @@ const mainServices: Service[] = [
     title: "Transport Services",
     subtitle: "Freight & Delivery",
     description: "Furniture, appliance, and cargo transport across NRW. From single items to full loads.",
-    image: serviceTransport,
+    image: "/service-moebeltransport.webp",
     features: ["Flexible scheduling", "Various vehicle sizes", "Insured transport"],
     slug: "furniture-transport"
   },

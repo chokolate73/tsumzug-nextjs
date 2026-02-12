@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image, { StaticImageData } from 'next/image';
-import serviceTransport from '@/assets/service-transport.webp';
+
 import { Home, Trash2, Truck, Building2, Wrench, PaintBucket, Piano, Package, Warehouse, Sparkles, Plug, Hammer, LucideIcon, ArrowRight } from 'lucide-react';
 interface Service {
   icon: LucideIcon;
@@ -49,7 +49,7 @@ const mainServices: Service[] = [{
   title: "Möbeltransport",
   subtitle: "Transportservice",
   description: "Möbel-, Geräte- und Gütertransport in NRW. Von Einzelstücken bis zur Komplettladung.",
-  image: serviceTransport,
+  image: "/service-moebeltransport.webp",
   features: ["Flexible Terminplanung", "Verschiedene Fahrzeuggrößen", "Versicherter Transport"],
   slug: "moebeltransport"
 }, {

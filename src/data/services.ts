@@ -420,8 +420,8 @@ Our transport service is flexible, reliable, and insured. Furniture transport in
       en: 'furniture transport, furniture delivery, freight transport, furniture delivery service, transport Duisburg',
       ru: 'перевозка мебели, доставка мебели, грузоперевозки, служба доставки мебели, транспорт Дуйсбург',
     },
-    image: '/assets/service-transport.jpg',
-    heroImage: '/assets/service-transport.jpg',
+    image: '/service-moebeltransport.webp',
+    heroImage: '/service-moebeltransport.webp',
   },
   {
     id: 'hausmeisterservice',
